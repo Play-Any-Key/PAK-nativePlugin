@@ -1,6 +1,7 @@
 #pragma once
 
 #include <atomic>
+#include <string>
 #include <vector>
 
 #include "ChartParser.h"
@@ -54,6 +55,7 @@ struct PluginState {
     aubio_onset_t *onsetDetector;
     aubio_fft_t *chordFft;
     std::vector<float> lpfState;
+    std::string namModelPath = "assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam";
     std::unique_ptr<nam::DSP> namModel;
     std::vector<NAM_SAMPLE> namInput;
     std::vector<NAM_SAMPLE> namOutput;

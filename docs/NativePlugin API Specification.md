@@ -11,21 +11,23 @@ Unity에서 `PAKNativePlugin.dll`을 호출하기 위한 C API 명세서입니�
 - 내부 버퍼 크기: 128 frames
 - 세션 시작 전 카운트다운: 5000 ms
 - 지원 채보 버전: `0.1.0`, `0.2.0`
+- NAM 모델: `assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam`
 
 ## 호출 순서
 
 ### 채보 판정 사용
 
 ```text
-Initialize
-  -> LoadChart
-  -> ResetSessionTime
-  -> SetDSPParams
-  -> StartSession
-      -> GetAudioStats 반복 호출
-      -> PollJudgeEvent 반복 호출
-  -> StopSession
-  -> Shutdown
+SetNamModelPath (선택)
+  -> Initialize
+      -> LoadChart
+      -> ResetSessionTime
+      -> SetDSPParams
+      -> StartSession
+          -> GetAudioStats 반복 호출
+          -> PollJudgeEvent 반복 호출
+      -> StopSession
+      -> Shutdown
 ```
 
 ### 기타 입력만 사용
@@ -101,12 +103,27 @@ InitializeFingeringTest
 워크플로는 아니다.
 
 `Initialize`는 내부에서 기존 리소스를 먼저 정리한 뒤 새 오디오 스트림을 준비합니다.
+사용자 NAM 모델을 사용할 때는 `Initialize` 전에 `SetNamModelPath`를 호출합니다.
 `ResetSessionTime`은 새 세션 시작 전에 내부 시간과 판정 진행 상태를 0부터 다시 시작하도록 초기화합니다.
 `LoadChart`는 채보 판정에만 필요하며, 기타 입력만 사용할 때는 호출하지 않아도 됩니다.
 `StartSession`은 오디오 스트림과 판정 스레드를 시작하므로 `PollJudgeEvent`, `PollGuitarInputEvent`를 사용하기 전에 반드시 호출해야 합니다.
 한 세션은 채보 판정 또는 기타 입력 중 하나의 모드로만 동작합니다.
 `LoadChart`를 호출한 뒤 시작한 세션은 채보 판정 모드이며, `LoadChart` 없이 시작한 세션은 기타 입력 모드입니다.
 세션 종료 시에는 `StopSession`을 호출하고, 플러그인을 더 이상 쓰지 않을 때 `Shutdown`을 호출합니다.
+
+### NAM 모니터 DSP
+
+`Initialize`, `InitializeWithAudioDevice`, `InitializeWithAsioDriver`로 오디오 스트림을
+초기화하면 플러그인은 현재 선택된 NAM 모델을 한 번 로드합니다. 기본 경로는
+`assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam`이며, 다른 모델은 `Initialize` 전에
+`SetNamModelPath`로 지정합니다. 모델 경로는 프로세스 작업 폴더 기준 상대 경로이므로,
+배포 시에도 해당 경로에 모델 파일을 함께 배치해야 합니다.
+
+판정 queue에는 NAM 처리 전의 원 기타 PCM이 들어갑니다. 따라서 NAM 앰프 시뮬레이션은 모니터
+출력에만 영향을 주며, 피치·온셋·코드 판정에는 영향을 주지 않습니다.
+
+NAM은 첫 번째 입력 채널을 mono 기타 입력으로 처리하고, 처리 결과를 모든 출력 채널에
+사용합니다. 곡과 메트로놈은 NAM을 통과하지 않고 앰프 처리된 기타 신호에 섞입니다.
 
 ### 오디오 옵션 화면
 
@@ -272,6 +289,10 @@ public static class PakNativePlugin
         uint outputDevice,
         uint inputOffset,
         uint outputOffset);
+
+    [DllImport(DllName, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Ansi)]
+    public static extern void SetNamModelPath(
+        [MarshalAs(UnmanagedType.LPStr)] string modelPath);
 
     [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
     public static extern uint GetAsioDriverCount();
@@ -526,7 +547,7 @@ const char *GetPluginVersion(void);
 로드된 네이티브 플러그인의 버전 문자열을 반환합니다.
 초기화 전후와 관계없이 호출할 수 있습니다.
 
-현재 반환값은 `"0.5.0"`입니다.
+현재 반환값은 `"0.5.1"`입니다.
 
 ### Initialize
 
@@ -540,7 +561,7 @@ int Initialize(
     unsigned int outputOffset);
 ```
 
-오디오 스트림, DSP 상태, 판정 큐, aubio 피치/온셋 감지기를 초기화합니다.
+오디오 스트림, NAM 모니터 모델, DSP 상태, 판정 큐, aubio 피치/온셋 감지기를 초기화합니다.
 
 | 파라미터       | 의미                                 |
 | -------------- | ------------------------------------ |
@@ -790,14 +811,30 @@ void SetDSPParams(float inputGain, float outputGain, float lpfAlpha);
 처리 순서:
 
 ```text
-input gain -> tanh overdrive -> one-pole low-pass filter -> output gain
+guitar input (channel 0) -> input gain -> NAM amp model
+chart song / metronome mix -> one-pole low-pass filter -> output gain
 ```
 
 | 파라미터     | 의미                  | 기본값 |
 | ------------ | --------------------- | ------ |
-| `inputGain`  | 입력 게인             | 4.0    |
+| `inputGain`  | NAM 모델 앞 입력 게인 | 4.0    |
 | `outputGain` | 출력 게인             | 0.5    |
 | `lpfAlpha`   | low-pass filter alpha | 0.2    |
+
+### SetNamModelPath
+
+```c
+void SetNamModelPath(const char *modelPath);
+```
+
+다음 `Initialize`, `InitializeWithAudioDevice`, `InitializeWithAsioDriver` 호출에서 로드할
+`.nam` 모델 파일 경로를 설정합니다. 반드시 해당 초기화 API 전에 호출합니다. 호출하지 않으면
+기본 경로 `assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam`를 사용합니다.
+
+```csharp
+PakNativePlugin.SetNamModelPath("assets/NAM/my-amp.nam");
+PakNativePlugin.Initialize(channels, sampleRate, inputDevice, outputDevice, inputOffset, outputOffset);
+```
 
 ### SetGuitarInputIntervalMs
 

@@ -66,10 +66,10 @@ static int initializeAudioDriver(RtAudio::Api api,
     g_state.outputGain.store(0.5f);
     g_state.songVolume.store(1.0f);
     g_state.lpfAlpha.store(0.2f);
-    // Loads the bundled NAM amp model before the audio callback starts.
+    // Loads the selected NAM amp model before the audio callback starts.
     try {
         g_state.namModel = nam::get_dsp(
-            std::filesystem::path("assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam"));
+            std::filesystem::path(g_state.namModelPath));
     } catch (const std::exception &error) {
         std::fprintf(stderr, "Failed to load NAM model: %s\n", error.what());
         Shutdown();

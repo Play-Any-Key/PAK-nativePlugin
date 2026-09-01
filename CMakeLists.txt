@@ -220,6 +220,11 @@ target_link_libraries(RhythmGameDLL
   PRIVATE
     nlohmann_json::nlohmann_json
 )
+add_dependencies(RhythmGameDLL PAKNativePlugin)
+target_compile_definitions(RhythmGameDLL
+  PRIVATE
+    PAK_DEFAULT_DLL_PATH="$<TARGET_FILE:PAKNativePlugin>"
+)
 
 # DLL 기반 천천히 재생 연습 속도 변경 테스트
 add_executable(PracticeModeSlowDownTest

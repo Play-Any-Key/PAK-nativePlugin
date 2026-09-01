@@ -213,6 +213,9 @@ PLUGIN_API int RestartSession(void);
 // Updates monitor DSP gain and low-pass parameters.
 PLUGIN_API void SetDSPParams(float inputGain, float outputGain, float lpfAlpha);
 
+// Sets the NAM model file path used by the next audio initialization.
+PLUGIN_API void SetNamModelPath(const char *modelPath);
+
 // Sets the chart-song mix volume independently from monitor DSP gain.
 PLUGIN_API void SetSongVolume(float volume);
 

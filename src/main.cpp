@@ -19,7 +19,7 @@ static std::thread g_judgeThread;
 
 extern "C" PLUGIN_API const char *GetPluginVersion(void) {
     // Returns the version of the loaded native plugin.
-    return "0.5.0";
+    return "0.5.1";
 }
 
 int inoutAudioTest(void *outputBuffer,
@@ -272,6 +272,11 @@ extern "C" PLUGIN_API void SetDSPParams(float inputGain, float outputGain, float
     g_state.inputGain.store(inputGain);
     g_state.outputGain.store(outputGain);
     g_state.lpfAlpha.store(lpfAlpha);
+}
+
+extern "C" PLUGIN_API void SetNamModelPath(const char *modelPath) {
+    // Selects the NAM model file that the next audio initialization loads.
+    g_state.namModelPath = modelPath;
 }
 
 extern "C" PLUGIN_API int StartAudioTest(void) {

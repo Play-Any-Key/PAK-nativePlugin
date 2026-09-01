@@ -266,7 +266,11 @@ void applyJudgeEvent(ClientState *state, const JudgeEvent &event) {
 int main(int argc, char *argv[]) {
     unsigned int channels, fs, oDevice = 0, iDevice = 0, iOffset = 0, oOffset = 0;
     std::string chartPath = "assets/charts/PAK - Night.json";
-    std::string dllPath = "out/build/ninja-debug/PAKNativePlugin.dll";
+#ifdef PAK_DEFAULT_DLL_PATH
+    std::string dllPath = PAK_DEFAULT_DLL_PATH;
+#else
+    std::string dllPath = "PAKNativePlugin.dll";
+#endif
 
     // Minimal command-line checking.
     if (argc < 3 || argc > 9)
@@ -352,8 +356,8 @@ int main(int argc, char *argv[]) {
 
         auto now = std::chrono::steady_clock::now();
         if (now - lastSyncCheck >= std::chrono::milliseconds(500)) {
-            std::cout << "\nSong time: " << (int)songInfo.songTimeMs
-                      << " ms (native DLL output)" << std::flush;
+            std::cout << "\nSong time: " << (int)songInfo.songTimeMs << " ms (native DLL output)"
+                      << std::flush;
             lastSyncCheck = now;
         }
 

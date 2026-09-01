@@ -1,61 +1,61 @@
 {
-  "version": 6,
-  "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 20,
-    "patch": 0
-  },
-  "configurePresets": [
-    {
-      "name": "base",
-      "hidden": true,
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/out/build/${presetName}",
-      "installDir": "${sourceDir}/out/install/${presetName}",
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "CMAKE_C_COMPILER": "cl.exe",
-        "CMAKE_CXX_COMPILER": "cl.exe",
-        "VCPKG_TARGET_TRIPLET": "x64-windows",
-        "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed"
-      },
-      "environment": {
-        "VCPKG_ROOT": "D:/devTools/vcpkg"
-      }
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 20,
+        "patch": 0
     },
-    {
-      "name": "ninja-debug",
-      "displayName": "Ninja Debug (vcpkg)",
-      "inherits": "base",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
-      }
-    },
-    {
-      "name": "ninja-release",
-      "displayName": "Ninja Release (vcpkg)",
-      "inherits": "base",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
-      }
-    }
-  ],
-  "buildPresets": [
-    {
-      "name": "ninja-debug",
-      "configurePreset": "ninja-debug",
-      "jobs": 8
-    },
-    {
-      "name": "ninja-release",
-      "configurePreset": "ninja-release",
-      "jobs": 8
-    }
-  ],
-  "testPresets": [
-    {
-      "name": "ninja-debug",
-      "configurePreset": "ninja-debug"
-    }
-  ]
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "VCPKG_TARGET_TRIPLET": "x64-windows",
+                "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed"
+            },
+            "environment": {
+                "VCPKG_ROOT": "D:/devTools/vcpkg"
+            }
+        },
+        {
+            "name": "ninja-debug",
+            "displayName": "Ninja Debug (vcpkg)",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "ninja-release",
+            "displayName": "Ninja Release (vcpkg)",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "ninja-debug",
+            "configurePreset": "ninja-debug",
+            "jobs": 8
+        },
+        {
+            "name": "ninja-release",
+            "configurePreset": "ninja-release",
+            "jobs": 8
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "ninja-debug",
+            "configurePreset": "ninja-debug"
+        }
+    ]
 }
