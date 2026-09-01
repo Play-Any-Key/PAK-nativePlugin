@@ -150,21 +150,16 @@ PLUGIN_API int InitializeWithAudioDevice(unsigned int channels,
                                          unsigned int inputOffset,
                                          unsigned int outputOffset);
 
-// Opens an input-to-output pass-through stream without session processing.
-PLUGIN_API int InitializeAudioTest(unsigned int channels,
-                                   unsigned int sampleRate,
-                                   unsigned int inputDeviceId,
-                                   unsigned int outputDeviceId,
-                                   unsigned int inputOffset,
-                                   unsigned int outputOffset);
+// Prepares the currently initialized stream for pass-through RMS analysis.
+PLUGIN_API int InitializeAudioTest(void);
 
-// Starts pass-through audio testing for the connected instrument input.
+// Starts pass-through audio testing and judge-thread RMS analysis.
 PLUGIN_API int StartAudioTest(void);
 
 // Stops pass-through audio testing.
 PLUGIN_API void StopAudioTest(void);
 
-// Copies the current pass-through output level in dBFS.
+// Copies the latest judge-thread RMS level in dBFS.
 PLUGIN_API int GetAudioTestOutputLevelDb(float *outLevelDb);
 
 // Loads a chart JSON file for the next session.

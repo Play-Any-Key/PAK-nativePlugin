@@ -17,8 +17,9 @@ struct PluginApi {
 #ifdef _WIN32
     HMODULE module;
 #endif
-    int (*InitializeAudioTest)(
+    int (*InitializeWithAudioDevice)(
         unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
+    int (*InitializeAudioTest)(void);
     int (*StartAudioTest)(void);
     void (*StopAudioTest)(void);
     int (*GetAudioTestOutputLevelDb)(float *);
@@ -61,6 +62,8 @@ int main(int argc, char *argv[]) {
 
     plugin.InitializeAudioTest = reinterpret_cast<decltype(plugin.InitializeAudioTest)>(
         GetProcAddress(plugin.module, "InitializeAudioTest"));
+    plugin.InitializeWithAudioDevice = reinterpret_cast<decltype(plugin.InitializeWithAudioDevice)>(
+        GetProcAddress(plugin.module, "InitializeWithAudioDevice"));
     plugin.StartAudioTest = reinterpret_cast<decltype(plugin.StartAudioTest)>(
         GetProcAddress(plugin.module, "StartAudioTest"));
     plugin.StopAudioTest = reinterpret_cast<decltype(plugin.StopAudioTest)>(
@@ -69,7 +72,8 @@ int main(int argc, char *argv[]) {
         GetProcAddress(plugin.module, "GetAudioTestOutputLevelDb"));
     plugin.Shutdown = reinterpret_cast<decltype(plugin.Shutdown)>(
         GetProcAddress(plugin.module, "Shutdown"));
-    if (plugin.InitializeAudioTest == nullptr || plugin.StartAudioTest == nullptr ||
+    if (plugin.InitializeWithAudioDevice == nullptr || plugin.InitializeAudioTest == nullptr ||
+        plugin.StartAudioTest == nullptr ||
         plugin.StopAudioTest == nullptr || plugin.GetAudioTestOutputLevelDb == nullptr ||
         plugin.Shutdown == nullptr) {
         std::cerr << "Failed to load output-test APIs.\n";
@@ -77,13 +81,19 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    if (plugin.InitializeAudioTest(channels,
-                                   sampleRate,
-                                   inputDeviceId,
-                                   outputDeviceId,
-                                   inputOffset,
-                                   outputOffset) != 0) {
+    if (plugin.InitializeWithAudioDevice(channels,
+                                         sampleRate,
+                                         inputDeviceId,
+                                         outputDeviceId,
+                                         inputOffset,
+                                         outputOffset) != 0) {
         std::cerr << "Failed to initialize the pass-through stream.\n";
+        plugin.Shutdown();
+        FreeLibrary(plugin.module);
+        return 1;
+    }
+    if (plugin.InitializeAudioTest() != 0) {
+        std::cerr << "Failed to prepare the pass-through test.\n";
         plugin.Shutdown();
         FreeLibrary(plugin.module);
         return 1;

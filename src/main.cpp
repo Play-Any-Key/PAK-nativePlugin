@@ -1,6 +1,5 @@
 #include "main.h"
 
-#include <cmath>
 #include <cstring>
 #include <thread>
 
@@ -19,31 +18,7 @@ static std::thread g_judgeThread;
 
 extern "C" PLUGIN_API const char *GetPluginVersion(void) {
     // Returns the version of the loaded native plugin.
-    return "0.5.1";
-}
-
-int inoutAudioTest(void *outputBuffer,
-                   void *inputBuffer,
-                   unsigned int nBufferFrames,
-                   double,
-                   RtAudioStreamStatus,
-                   void *data) {
-    // Passes the connected instrument input to output and reports its RMS level in dBFS.
-    PluginState *state = (PluginState *)data;
-    MY_TYPE *input = (MY_TYPE *)inputBuffer;
-    MY_TYPE *output = (MY_TYPE *)outputBuffer;
-    double sumSquares = 0.0;
-    unsigned int sampleCount = nBufferFrames * state->channels;
-
-    for (unsigned int index = 0; index < sampleCount; ++index) {
-        float sample = (float)input[index] / 32768.0f;
-        output[index] = input[index];
-        sumSquares += sample * sample;
-    }
-
-    float rms = std::sqrt((float)(sumSquares / sampleCount));
-    state->audioTestOutputLevelDb.store(rms > 0.0f ? 20.0f * std::log10(rms) : -96.0f);
-    return 0;
+    return "0.5.2";
 }
 
 int inoutRhythmGame(void *outputBuffer,
@@ -57,6 +32,21 @@ int inoutRhythmGame(void *outputBuffer,
     MY_TYPE *input = (MY_TYPE *)inputBuffer;
     MY_TYPE *output = (MY_TYPE *)outputBuffer;
     unsigned int sampleCount = nBufferFrames * state->channels;
+
+    if (state->sessionMode.load() == SessionMode_AudioTest) {
+        std::memcpy(output, input, sampleCount * sizeof(MY_TYPE));
+        if (pushAudioBlock(&state->audioQueue,
+                           input,
+                           nBufferFrames,
+                           sampleCount,
+                           streamTime,
+                           0.0,
+                           0.0))
+            state->queuedAudioBlocks.fetch_add(1);
+        else
+            state->droppedAudioBlocks.fetch_add(1);
+        return 0;
+    }
 
     if (!state->sessionClockStarted.exchange(true))
         state->sessionStreamTimeOffset.store(streamTime);
@@ -280,25 +270,37 @@ extern "C" PLUGIN_API void SetNamModelPath(const char *modelPath) {
 }
 
 extern "C" PLUGIN_API int StartAudioTest(void) {
-    // Starts the configured instrument input-to-output pass-through stream.
+    // Starts pass-through audio and RMS analysis on the judge thread.
     if (g_adac == nullptr || !g_state.audioTestMode ||
         g_adac->isStreamOpen() == false || g_adac->isStreamRunning())
         return -1;
 
-    if (g_adac->startStream())
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_AudioTest);
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    if (g_adac->startStream()) {
+        StopAudioTest();
         return -1;
+    }
     return 0;
 }
 
 extern "C" PLUGIN_API void StopAudioTest(void) {
-    // Stops the instrument input-to-output pass-through stream.
+    // Stops pass-through audio and joins its RMS analysis thread.
+    g_state.stopRequested.store(true);
     if (g_state.audioTestMode && g_adac != nullptr && g_adac->isStreamRunning())
         g_adac->stopStream();
+    if (g_judgeThread.joinable())
+        g_judgeThread.join();
+    g_state.sessionMode.store(SessionMode_None);
     g_state.audioTestOutputLevelDb.store(-96.0f);
 }
 
 extern "C" PLUGIN_API int GetAudioTestOutputLevelDb(float *outLevelDb) {
-    // Copies the latest pass-through output RMS level in dBFS for the client.
+    // Copies the latest judge-thread RMS level in dBFS for the client.
     if (g_adac == nullptr || !g_state.audioTestMode)
         return -1;
 

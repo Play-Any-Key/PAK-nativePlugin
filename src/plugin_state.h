@@ -30,6 +30,7 @@ enum SessionMode {
     SessionMode_Judge = 2,
     SessionMode_SlowPractice = 3,
     SessionMode_FingeringPractice = 4,
+    SessionMode_AudioTest = 5,
 };
 
 struct PitchObservation {

@@ -385,7 +385,20 @@ void fillJudgeEvent(JudgeEvent *event,
 }
 
 void processJudgmentBlock(PluginState *state, AudioBlock *block) {
-    // Judges one captured audio block and emits note events.
+    // Analyzes one captured audio block for the active session mode.
+    if (state->sessionMode.load() == SessionMode_AudioTest) {
+        double sumSquares = 0.0;
+        unsigned int sampleCount = block->frames * state->channels;
+        for (unsigned int i = 0; i < sampleCount; ++i) {
+            float sample = (float)block->samples[i] / 32768.0f;
+            sumSquares += sample * sample;
+        }
+        float rms = std::sqrt((float)(sumSquares / sampleCount));
+        state->audioTestOutputLevelDb.store(
+            rms > 0.0f ? 20.0f * std::log10(rms) : -96.0f);
+        return;
+    }
+
     double audioTimeMs = block->streamTime * 1000.0;
     double chartTimeMs = block->chartTimeMs;
 

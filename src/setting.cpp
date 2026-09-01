@@ -28,13 +28,6 @@ int inoutRhythmGame(void *outputBuffer,
                     RtAudioStreamStatus status,
                     void *data);
 
-int inoutAudioTest(void *outputBuffer,
-                   void *inputBuffer,
-                   unsigned int nBufferFrames,
-                   double streamTime,
-                   RtAudioStreamStatus status,
-                   void *data);
-
 static int initializeAudioDriver(RtAudio::Api api,
                                  unsigned int channels,
                                  unsigned int sampleRate,
@@ -148,42 +141,15 @@ static int initializeAudioDriver(RtAudio::Api api,
     return 0;
 }
 
-extern "C" PLUGIN_API int InitializeAudioTest(unsigned int channels,
-                                                unsigned int sampleRate,
-                                                unsigned int inputDeviceId,
-                                                unsigned int outputDeviceId,
-                                                unsigned int inputOffset,
-                                                unsigned int outputOffset) {
-    // Opens a WASAPI pass-through stream without allocating session processing resources.
-    Shutdown();
+extern "C" PLUGIN_API int InitializeAudioTest(void) {
+    // Prepares RMS analysis on the currently initialized audio stream.
+    if (g_adac == nullptr || g_adac->isStreamOpen() == false || g_adac->isStreamRunning())
+        return -1;
 
-    g_adac = new RtAudio(RtAudio::WINDOWS_WASAPI);
-    g_adac->showWarnings(true);
-    g_state.channels = channels;
-    g_state.sampleRate = sampleRate;
-    g_state.bufferFrames = 128;
     g_state.audioTestMode = true;
     g_state.audioTestOutputLevelDb.store(-96.0f);
-
-    RtAudio::StreamParameters iParams, oParams;
-    iParams.deviceId = inputDeviceId == 0 ? g_adac->getDefaultInputDevice() : inputDeviceId;
-    iParams.nChannels = channels;
-    iParams.firstChannel = inputOffset;
-    oParams.deviceId = outputDeviceId == 0 ? g_adac->getDefaultOutputDevice() : outputDeviceId;
-    oParams.nChannels = channels;
-    oParams.firstChannel = outputOffset;
-    RtAudio::StreamOptions options;
-    if (g_adac->openStream(&oParams,
-                           &iParams,
-                           FORMAT,
-                           sampleRate,
-                           &g_state.bufferFrames,
-                           &inoutAudioTest,
-                           (void *)&g_state,
-                           &options)) {
-        Shutdown();
-        return -1;
-    }
+    g_state.stopRequested.store(true);
+    g_state.sessionMode.store(SessionMode_None);
     return 0;
 }
 
