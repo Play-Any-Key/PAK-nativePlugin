@@ -98,6 +98,7 @@ struct PluginState {
     std::atomic<double> pauseStartedStreamTime;
     std::atomic<double> pausedStreamDuration;
     std::atomic<int> nextNoteIndex;
+    std::atomic<bool> ignoreOnsetsDuringJudgmentCollection;
     bool advanceFingeringTargetOnFailure;
     std::vector<PitchObservation> pitchObservations;
     std::vector<PendingGuitarInput> pendingGuitarInputs;

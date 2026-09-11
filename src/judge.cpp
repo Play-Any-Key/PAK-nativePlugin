@@ -336,7 +336,9 @@ void finalizePendingJudgments(PluginState *state, double chartTimeMs, double aud
                                        : judgeTiming(std::abs(pending.errorMs));
 
         JudgeEvent event;
-        int result = pitchMatched ? resultToCode(timingResult) : JudgeResult_Miss;
+        int result = pitchMatched ? resultToCode(timingResult)
+                                  : (pending.isFingeringPractice ? JudgeResult_Miss
+                                                                : JudgeResult_Wrong);
         if (pending.isFingeringPractice && note.interpretation == "chord") {
             if (pitchMatched)
                 state->passedChordJudgments.fetch_add(1);
@@ -467,7 +469,9 @@ void processJudgmentBlock(PluginState *state, AudioBlock *block) {
         state->gameStarted.store(true);
 
     int noteIndex = state->nextNoteIndex.load();
-    if (hasOnset && noteIndex < (int)state->chart.notes.size()) {
+    if (hasOnset && noteIndex < (int)state->chart.notes.size() &&
+        (!state->ignoreOnsetsDuringJudgmentCollection.load() ||
+         state->pendingJudgments.empty())) {
         const ChartParser::ChartNote &note = state->chart.notes[noteIndex];
         double errorMs = onsetChartTimeMs - note.startMs;
         double absErrorMs = std::abs(errorMs);

@@ -177,6 +177,7 @@ public static class PakNativePlugin
         Good = 1,
         Bad = 2,
         Miss = 3,
+        Wrong = 4,
     }
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -427,7 +428,8 @@ public static class PakNativePlugin
 | 0   | `Perfect` | 타이밍 오차가 60 ms 이하이고 피치가 일치  |
 | 1   | `Good`    | 타이밍 오차가 140 ms 이하이고 피치가 일치 |
 | 2   | `Bad`     | 타이밍 오차가 240 ms 이하이고 피치가 일치 |
-| 3   | `Miss`    | 타이밍 범위를 벗어났거나 피치가 불일치    |
+| 3   | `Miss`    | 타이밍 범위를 벗어났거나 입력이 없음     |
+| 4   | `Wrong`   | 타이밍 범위 안이지만 피치가 불일치       |
 
 `single` 이벤트의 피치 판정은 목표 MIDI와 감지 MIDI가 정확히 같아야 통과합니다.
 `chord` 이벤트는 아래의 CG-FPM 코드 판정 결과가 일치해야 통과합니다.

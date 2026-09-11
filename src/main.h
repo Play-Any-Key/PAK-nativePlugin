@@ -13,6 +13,7 @@ enum JudgeResult {
     JudgeResult_Good = 1,
     JudgeResult_Bad = 2,
     JudgeResult_Miss = 3,
+    JudgeResult_Wrong = 4,
 };
 
 struct JudgeEvent {
@@ -186,12 +187,27 @@ PLUGIN_API int InitializeFingeringTest(unsigned int channels,
                                        const char *onsetMethod,
                                        float onsetThreshold);
 
+// Initializes the no-device audio path used by the recorded rhythm-judge test.
+PLUGIN_API int InitializeJudgeTest(unsigned int channels,
+                                   unsigned int sampleRate,
+                                   const char *onsetMethod,
+                                   float onsetThreshold);
+
 // Starts the fingering-practice judge thread used by the recorded input test.
 PLUGIN_API int StartFingeringTestSession(void);
 
 // Queues one recorded input block through the normal fingering-practice judge path.
 PLUGIN_API int FeedFingeringTestAudio(const int16_t *samples, unsigned int frames);
 PLUGIN_API int PollFingeringTestRawOnset(FingeringTestRawOnset *outOnset);
+
+// Starts regular time-based judgment without opening an audio device.
+PLUGIN_API int StartJudgeTestSession(void);
+
+// Queues one recorded audio block through the regular rhythm-judge path.
+PLUGIN_API int FeedJudgeTestAudio(const int16_t *samples, unsigned int frames);
+
+// Chooses whether new onsets are ignored while a previous judgment is collecting audio.
+PLUGIN_API void SetIgnoreOnsetsDuringJudgmentCollection(int enabled);
 
 // Stops the current session.
 PLUGIN_API void StopSession(void);

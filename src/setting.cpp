@@ -46,6 +46,7 @@ static int initializeAudioDriver(RtAudio::Api api,
     g_state.sampleRate = sampleRate;
     g_state.bufferFrames = 128;
     g_state.nextNoteIndex.store(0);
+    g_state.ignoreOnsetsDuringJudgmentCollection.store(false);
     g_state.lastDetectedMidi = -1;
     g_state.input = nullptr;
     g_state.pitch = nullptr;
@@ -133,7 +134,7 @@ static int initializeAudioDriver(RtAudio::Api api,
     g_state.onsetDetector = new_aubio_onset("default", 1024, g_state.bufferFrames, sampleRate);
     g_state.chordFft = new_aubio_fft(CHORD_FFT_SIZE);
     aubio_pitch_set_unit(g_state.pitchDetector, "midi");
-    aubio_onset_set_threshold(g_state.onsetDetector, 0.3f);
+    aubio_onset_set_threshold(g_state.onsetDetector, 0.04f);
     if (!initializeSongDecoder()) {
         Shutdown();
         return -1;
@@ -184,6 +185,7 @@ extern "C" PLUGIN_API int InitializeFingeringTest(unsigned int channels,
     g_state.channels = channels;
     g_state.sampleRate = sampleRate;
     g_state.bufferFrames = 128;
+    g_state.ignoreOnsetsDuringJudgmentCollection.store(false);
     g_state.inputGain.store(4.0f);
     g_state.outputGain.store(0.5f);
     g_state.songVolume.store(1.0f);
@@ -219,6 +221,14 @@ extern "C" PLUGIN_API int InitializeFingeringTest(unsigned int channels,
     aubio_pitch_set_unit(g_state.pitchDetector, "midi");
     aubio_onset_set_threshold(g_state.onsetDetector, onsetThreshold);
     return initializeSongDecoder() ? 0 : -1;
+}
+
+extern "C" PLUGIN_API int InitializeJudgeTest(unsigned int channels,
+                                                unsigned int sampleRate,
+                                                const char *onsetMethod,
+                                                float onsetThreshold) {
+    // Reuses the no-device analyzer setup for a recorded regular-judge replay.
+    return InitializeFingeringTest(channels, sampleRate, onsetMethod, onsetThreshold);
 }
 
 extern "C" PLUGIN_API unsigned int GetAsioDriverCount(void) {

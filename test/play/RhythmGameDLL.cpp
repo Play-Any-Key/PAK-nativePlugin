@@ -96,6 +96,8 @@ const char *judgeResultText(int result) {
         return "Good";
     if (result == JudgeResult_Bad)
         return "Bad";
+    if (result == JudgeResult_Wrong)
+        return "Wrong";
     return "Miss";
 }
 
@@ -104,7 +106,7 @@ std::string formatJudgeEvent(const JudgeEvent &event) {
     std::ostringstream text;
     text << judgeResultText(event.result) << " (" << std::showpos << std::fixed
          << std::setprecision(1) << event.errorMs << std::noshowpos << " ms, " << event.noteName;
-    if (event.result == JudgeResult_Miss && event.detectedMidi != event.targetMidi)
+    if (event.result == JudgeResult_Wrong)
         text << ", MIDI " << event.detectedMidi << "/" << event.targetMidi;
     text << ")";
     return text.str();

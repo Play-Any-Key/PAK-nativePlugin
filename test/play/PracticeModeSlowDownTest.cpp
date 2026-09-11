@@ -89,6 +89,8 @@ const char *judgeResultText(int result) {
         return "Good";
     if (result == JudgeResult_Bad)
         return "Bad";
+    if (result == JudgeResult_Wrong)
+        return "Wrong";
     return "Miss";
 }
 

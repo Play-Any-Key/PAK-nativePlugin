@@ -407,6 +407,20 @@ extern "C" PLUGIN_API int StartFingeringTestSession(void) {
     return 0;
 }
 
+extern "C" PLUGIN_API int StartJudgeTestSession(void) {
+    // Starts the regular time-based judge thread without opening an audio stream.
+    if (g_adac != nullptr || g_state.input == nullptr)
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_Judge);
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+    g_state.droppedJudgeEvents.store(0);
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    return 0;
+}
+
 extern "C" PLUGIN_API int FeedFingeringTestAudio(const int16_t *samples, unsigned int frames) {
     // Sends one recorded audio block through the callback-to-judge queue used in practice.
     if (g_state.sessionMode.load() != SessionMode_FingeringPractice || frames != g_state.bufferFrames)
@@ -432,6 +446,35 @@ extern "C" PLUGIN_API int FeedFingeringTestAudio(const int16_t *samples, unsigne
     g_state.lastStreamTime.store(streamTime + (double)frames / g_state.sampleRate);
     g_state.lastChartTimeMs.store(chartTimeMs);
     return 0;
+}
+
+extern "C" PLUGIN_API int FeedJudgeTestAudio(const int16_t *samples, unsigned int frames) {
+    // Queues recorded PCM with its audio time used directly as the chart clock.
+    if (g_state.sessionMode.load() != SessionMode_Judge || frames != g_state.bufferFrames)
+        return -1;
+
+    double streamTime = g_state.lastStreamTime.load();
+    double chartTimeMs = streamTime * 1000.0;
+    if (!pushAudioBlock(&g_state.audioQueue,
+                        const_cast<MY_TYPE *>(samples),
+                        frames,
+                        frames * g_state.channels,
+                        streamTime,
+                        chartTimeMs,
+                        1.0)) {
+        g_state.droppedAudioBlocks.fetch_add(1);
+        return -1;
+    }
+
+    g_state.queuedAudioBlocks.fetch_add(1);
+    g_state.lastStreamTime.store(streamTime + (double)frames / g_state.sampleRate);
+    g_state.lastChartTimeMs.store(chartTimeMs);
+    return 0;
+}
+
+extern "C" PLUGIN_API void SetIgnoreOnsetsDuringJudgmentCollection(int enabled) {
+    // Selects whether one pending pitch or chord judgment locks out new onsets.
+    g_state.ignoreOnsetsDuringJudgmentCollection.store(enabled != 0);
 }
 
 extern "C" PLUGIN_API int GetJudgeProcessingStats(JudgeProcessingStats *outStats) {
