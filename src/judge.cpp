@@ -322,7 +322,10 @@ void finalizePendingJudgments(PluginState *state, double chartTimeMs, double aud
         PitchObservation selected = {};
         bool pitchMatched = false;
         int detectedMidi = 0;
-        if (note.interpretation == "chord") {
+        if (note.technique == "cutting") {
+            // Cutting has no target pitch; a timing-valid onset always passes its sound judgment.
+            pitchMatched = true;
+        } else if (note.interpretation == "chord") {
             if (pending.isFingeringPractice)
                 copyFingeringChordWindow(state, &pending);
             pitchMatched = matchesChordFundamentalPresence(state, pending, note);

@@ -1,0 +1,7012 @@
+{
+  "schemaVersion": "0.2.0",
+  "song": {
+    "songId": "pak_-_night",
+    "title": "PAK - Night",
+    "artist": "박종혁",
+    "bpm": 170.0000850000425,
+    "resolution": 480,
+    "timeSignature": "4/4",
+    "durationMs": 238588,
+    "audioFile": "PAK - Night.mp3",
+    "audioOffsetMs": 0
+  },
+  "track": {
+    "trackId": "guitar_normal",
+    "instrument": "guitar",
+    "difficulty": "normal",
+    "tuning": [
+      "E2",
+      "A2",
+      "D3",
+      "G3",
+      "B3",
+      "E4"
+    ],
+    "chordDefinitions": [
+      {
+        "id": "G5",
+        "symbol": "G5",
+        "fingering": [
+          {
+            "string": 6,
+            "fret": 3,
+            "finger": 1
+          },
+          {
+            "string": 5,
+            "fret": 5,
+            "finger": 3
+          }
+        ]
+      },
+      {
+        "id": "C5",
+        "symbol": "C5",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 3,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 5,
+            "finger": 3
+          }
+        ]
+      },
+      {
+        "id": "D5",
+        "symbol": "D5",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 5,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 7,
+            "finger": 3
+          }
+        ]
+      },
+      {
+        "id": "A5",
+        "symbol": "A5",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 0,
+            "finger": 0
+          },
+          {
+            "string": 4,
+            "fret": 2,
+            "finger": 1
+          }
+        ]
+      },
+      {
+        "id": "E5_high",
+        "symbol": "E5",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 7,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 9,
+            "finger": 3
+          }
+        ]
+      },
+      {
+        "id": "B5",
+        "symbol": "B5",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 2,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 4,
+            "finger": 3
+          }
+        ]
+      },
+      {
+        "id": "E5_low",
+        "symbol": "E5",
+        "fingering": [
+          {
+            "string": 6,
+            "fret": 0,
+            "finger": 0
+          },
+          {
+            "string": 5,
+            "fret": 2,
+            "finger": 1
+          }
+        ]
+      },
+      {
+        "id": "B7",
+        "symbol": "B7",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 6,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 7,
+            "finger": 2
+          }
+        ]
+      },
+      {
+        "id": "C#dim",
+        "symbol": "C#dim",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 4,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 5,
+            "finger": 2
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "interpretation": "chord",
+      "startTick": 17280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 17760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 18240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 18480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "up"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 18720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 18960,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 19440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 19680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 19920,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 20400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 20640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 20880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 21120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 21600,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 22080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 22320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 22560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 22800,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 23280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 23520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 23760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 24240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 24480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 24720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 24960,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 25440,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 25920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 26160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 26400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 26640,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 27120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 27360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 27600,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 28080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 28320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 28560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 28800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 29280,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 29760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 30000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 30240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 30480,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 30960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 31200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 31440,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 31920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 32160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 32400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 32640,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 33120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 33600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 33840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 34080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 34320,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 34800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 35040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 35280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 35760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 36000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 36240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 36480,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 36960,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 37440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 37680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 37920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 38160,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 38640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 38880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 39120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 39600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 39840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 40080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 40320,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 40800,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 41280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 41520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 41760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 42000,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 42480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 42720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 42960,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 43440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 43680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 43920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 44160,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 44640,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 45120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 45360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 45600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 45840,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 46320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 46560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 46800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 47280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 47520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 47760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 48000,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 48480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 48720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 48960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 49200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 49440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 49680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 49920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 50160,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 50400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 50640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 50880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 51120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 51360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 51600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 51840,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 52320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 52560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 52800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 53040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 53280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 53520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 53760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 54000,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 54240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 54480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 54720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 54960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 55200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 55440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 55680,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 56160,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 56400,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 56640,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 56880,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 57120,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 57360,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 57600,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 57840,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 58080,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 58320,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 58560,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 58800,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 59040,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 59280,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 59520,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 60000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 60240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 60480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 60720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 60960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 61200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 61440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 61680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 61920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 62160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 62400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 62640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 62880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 63120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 63360,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 63840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 64080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 64320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 64560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 64800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 65040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 65280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 65520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 65760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 66000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 66240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 66480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 66720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 66960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 67200,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 67680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 67920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 68160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 68400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 68640,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 68880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 69120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 69360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 69600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 69840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 70080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 70320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 70560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 70800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 71040,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 71520,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 71760,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 72000,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 72240,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 72480,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 72720,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 72960,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 73200,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 73440,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 73680,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 73920,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 74160,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 74400,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 74640,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 74880,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 75360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 75600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 75840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 76080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 76320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 76560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 76800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 77040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 77280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 77520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 77760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 78000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 78240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 78480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 78720,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 79200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 79440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 79680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 79920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 80160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 80400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 80640,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 81120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 81360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 81600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 81840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 82080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 82320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 82560,
+      "durationTick": 480,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 83040,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 83280,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 83520,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 83760,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 84000,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 84240,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 84480,
+      "durationTick": 480,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 84960,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 85200,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 85440,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 85680,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 85920,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 86160,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 86400,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 86880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 87120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 87360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 87600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 87840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 88080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 88320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 88560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 88800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 89040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 89280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 89520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 89760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 90000,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 90240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 90480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 90720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 90960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 91200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 91440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 91680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 91920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 92160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 92400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 92640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 92880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 93120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 93360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 93600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 93840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 94080,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 94560,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 95040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 95280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 95520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 95760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 96240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 96480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 96720,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 97200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 97440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 97680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 97920,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 98400,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 98880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 99120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 99360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 99600,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 100080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 100320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 100560,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 101040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 101280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 101520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 101760,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 102240,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 102720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 102960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 103200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 103440,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 103920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 104160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 104400,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 104880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 105120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 105360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 105600,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 106080,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 106560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 106800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 107040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 107280,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 107760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 108000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 108240,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 108720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 108960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 109200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 109440,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 109920,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 110400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 110640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 110880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 111120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 111600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 111840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 112080,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 112560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 112800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 113040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 113280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 113760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 114240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 114480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 114720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 114960,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 115440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 115680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 115920,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 116400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 116640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 116880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 117120,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 117600,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 118080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 118320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 118560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 118800,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 119280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 119520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 119760,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 120240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 120480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 120720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 120960,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 121440,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 121920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 122160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 122400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 122640,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 123120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 123360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 123600,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 124080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 124320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 124560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 124800,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 125280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 125760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 126000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 126240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 126480,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 126960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 127200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 127440,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 127920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 128160,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 128400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 128640,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 129120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 129600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 129840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 130080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 130320,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 130800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 131040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 131280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 131760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 132000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 132240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 132480,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 132960,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 133440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 133680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 133920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 134160,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 134640,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 134880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 135120,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 135600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 135840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 136080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 136320,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 136800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 137280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 137520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 137760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 138000,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 138480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 138720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 138960,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 139440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 139680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 139920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 140160,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 140640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 140880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 141120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 141360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 141600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 141840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 142080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 142320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 142560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 142800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 143040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 143280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 143520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 143760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 144000,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 144480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 144720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 144960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 145200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 145440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 145680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 145920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 146160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 146400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 146640,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 146880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 147120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 147360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 147600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 147840,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 148320,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 148560,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 148800,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 149040,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 149280,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 149520,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 149760,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 150000,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 150240,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 150480,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 150720,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 150960,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 151200,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 151440,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 151680,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 152160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 152400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 152640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 152880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 153120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 153360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 153600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 153840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 154080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 154320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 154560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 154800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 155040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 155280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 155520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 155760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 156000,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 156480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 156720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 156960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 157200,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 157680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 157920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 158160,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 158640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 158880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 159120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 159360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 159600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 159840,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 160320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 160560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 160800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 161040,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 161520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 161760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 162000,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 162480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 162720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 162960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 163200,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 163440,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 163680,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 164160,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 164400,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 164640,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 164880,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 165360,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 165600,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 165840,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 166320,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 166560,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 166800,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 167040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 167280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 167520,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 168000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 168240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 168480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 168720,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 169200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 169440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 169680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 169920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 170160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 170400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 170640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 170880,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 171360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 171600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 171840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 172080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 172320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 172560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 172800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 173280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 173520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 173760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 174000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 174240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 174480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 174720,
+      "durationTick": 480,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 175200,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 175440,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 175680,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 175920,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 176160,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 176400,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 176640,
+      "durationTick": 480,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 177120,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 177360,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 177600,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 177840,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 178080,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 178320,
+      "durationTick": 240,
+      "chordId": "B5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 178560,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 179040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 179280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 179520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 179760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 180000,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 180240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 180480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 180720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 180960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 181200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 181440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 181680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 181920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 182160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 182400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 182640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 182880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 183120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 183360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 183600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 183840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 184080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 184320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 184560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 184800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 185040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 185280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 185520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 185760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 186000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 186240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 186480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 187680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 187920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 189120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 189360,
+      "durationTick": 720,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 190080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 190320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 191520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 191760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 192960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 193200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 193440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 193680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 193920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 194160,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 195360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 195600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 196800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 197040,
+      "durationTick": 720,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 197760,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 198000,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 199200,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 199440,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 200160,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 200400,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 200640,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 200880,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 201120,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 201360,
+      "durationTick": 240,
+      "chordId": "E5_low",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 201600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 201840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 202080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 202320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 202560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 202800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 203040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 203280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 203520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 203760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 204000,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 204240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 204480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 204720,
+      "durationTick": 720,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 205440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 205680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 205920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 206160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 206400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 206640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 206880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 207120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 207360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 207600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 207840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 208080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 208320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 208560,
+      "durationTick": 720,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 209280,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 209520,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 209760,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 210000,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 210240,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 210480,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 210720,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 210960,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 211200,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 211440,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 211680,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 211920,
+      "durationTick": 240,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 212160,
+      "durationTick": 320,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 212480,
+      "durationTick": 320,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 212800,
+      "durationTick": 320,
+      "chordId": "B7",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 213120,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 213360,
+      "durationTick": 480,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 213840,
+      "durationTick": 480,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 214320,
+      "durationTick": 240,
+      "chordId": "E5_high",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 214560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 214800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 215280,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 215760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 216000,
+      "durationTick": 960,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 216960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 217200,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 217680,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 218160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 218400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 218640,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 219120,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 219600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 219840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 220080,
+      "durationTick": 720,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 220800,
+      "durationTick": 240,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 221040,
+      "durationTick": 480,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 221520,
+      "durationTick": 480,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 222000,
+      "durationTick": 240,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 222240,
+      "durationTick": 240,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 222480,
+      "durationTick": 480,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 222960,
+      "durationTick": 480,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 223440,
+      "durationTick": 240,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 223680,
+      "durationTick": 240,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 223920,
+      "durationTick": 720,
+      "chordId": "C#dim",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 224640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 224880,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 225360,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 225840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 226080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 226320,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 226800,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 227280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 227520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 227760,
+      "durationTick": 720,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 228480,
+      "durationTick": 3360,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 231840,
+      "durationTick": 480,
+      "string": 4,
+      "fret": 2,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 232320,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 232800,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 233280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 233520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 233760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 234000,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 234480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 234720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 234960,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 235440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 235680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 235920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 236160,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 236640,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 237120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 237360,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 237600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 237840,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 238320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 238560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 238800,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 239280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 239520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 239760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 240000,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 240480,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 240960,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 241200,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 241440,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 241680,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 242160,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 242400,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 242640,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 243120,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 243360,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 243600,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 243840,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 244320,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 244800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 245040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 245280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 245520,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 246000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 246240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 246480,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 246960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 247200,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 247440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 247680,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 248160,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 248640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 248880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 249120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 249360,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 249840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 250080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 250320,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 250800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 251040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 251280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 251520,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 252000,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 252480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 252720,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 252960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 253200,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 253680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 253920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 254160,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 254640,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 254880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 255120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 255360,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 255840,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 256320,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 256560,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 256800,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 257040,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 257520,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 257760,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 258000,
+      "durationTick": 480,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 258480,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 258720,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 258960,
+      "durationTick": 240,
+      "chordId": "A5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 259200,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 259680,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 260160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 260400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 260640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 260880,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 261360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 261600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 261840,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 262320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 262560,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 262800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 263040,
+      "durationTick": 3840,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 269120,
+      "durationTick": 320,
+      "string": 3,
+      "fret": 0,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 269440,
+      "durationTick": 320,
+      "string": 4,
+      "fret": 4,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 269760,
+      "durationTick": 320,
+      "string": 4,
+      "fret": 0,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 270080,
+      "durationTick": 320,
+      "string": 5,
+      "fret": 3,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "single",
+      "startTick": 270400,
+      "durationTick": 320,
+      "string": 5,
+      "fret": 2,
+      "finger": 0,
+      "technique": "normal"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 270720,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 271200,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 271680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 271920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 272160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 272400,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 272880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 273120,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 273360,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 273840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 274080,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 274320,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 274560,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 275040,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 275520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 275760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 276000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 276240,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 276720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 276960,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 277200,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 277680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 277920,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 278160,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 278400,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 278880,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 279360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 279600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 279840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 280080,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 280560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 280800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 281040,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 281520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 281760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 282000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 282240,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 282720,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 283200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 283440,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 283680,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 283920,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 284400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 284640,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 284880,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 285360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 285600,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 285840,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 286080,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 286560,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 287040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 287280,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 287520,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 287760,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 288240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 288480,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 288720,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 289200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 289440,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 289680,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 289920,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 290400,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 290880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 291120,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 291360,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 291600,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 292080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 292320,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 292560,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 293040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 293280,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 293520,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 293760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 294240,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 294720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 294960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 295200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 295440,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 295920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 296160,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 296400,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 296880,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 297120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 297360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 297600,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 298080,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 298560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 298800,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 299040,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 299280,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 299760,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 300000,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 300240,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 300720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 300960,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 301200,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 301440,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 301920,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 302400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 302640,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 302880,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 303120,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 303600,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 303840,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 304080,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 304560,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 304800,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 305040,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 305280,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 305760,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 306240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 306480,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 306720,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 306960,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 307440,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 307680,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 307920,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 308400,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 308640,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 308880,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 309120,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 309600,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 310080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 310320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 310560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 310800,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 311280,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 311520,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 311760,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 312240,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 312480,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 312720,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 312960,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 313440,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 313920,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 314160,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 314400,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 314640,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 315120,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 315360,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 315600,
+      "durationTick": 480,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 316080,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 316320,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 316560,
+      "durationTick": 240,
+      "chordId": "G5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 316800,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 317280,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 317760,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 318000,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 318240,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 318480,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 318960,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 319200,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 319440,
+      "durationTick": 480,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 319920,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 320160,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 320400,
+      "durationTick": 240,
+      "chordId": "C5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 320640,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 321120,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 321600,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 321840,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 322080,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 322320,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 322800,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 323040,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 323280,
+      "durationTick": 480,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 323760,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 324000,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 324240,
+      "durationTick": 240,
+      "chordId": "D5",
+      "strumTechnique": "down"
+    }
+  ]
+}

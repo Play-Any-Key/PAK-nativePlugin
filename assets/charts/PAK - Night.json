@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "0.2.0",
+  "schemaVersion": "0.2.1",
   "song": {
     "songId": "pak_-_night",
     "title": "PAK - Night",
@@ -8,7 +8,7 @@
     "resolution": 480,
     "timeSignature": "4/4",
     "durationMs": 238588,
-    "audioFile": "PAK - Night.mp3",
+    "audioFile": "PAK - Night.wav",
     "audioOffsetMs": 0
   },
   "track": {
@@ -29,14 +29,14 @@
         "symbol": "G5",
         "fingering": [
           {
-            "string": 6,
-            "fret": 3,
-            "finger": 1
-          },
-          {
             "string": 5,
             "fret": 5,
             "finger": 3
+          },
+          {
+            "string": 6,
+            "fret": 3,
+            "finger": 1
           }
         ]
       },
@@ -121,6 +121,38 @@
         ]
       },
       {
+        "id": "chord_7",
+        "symbol": "chord_7",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 0,
+            "finger": 0
+          },
+          {
+            "string": 6,
+            "fret": 0,
+            "finger": 0
+          }
+        ]
+      },
+      {
+        "id": "chord_8",
+        "symbol": "chord_8",
+        "fingering": [
+          {
+            "string": 4,
+            "fret": 0,
+            "finger": 0
+          },
+          {
+            "string": 5,
+            "fret": 0,
+            "finger": 0
+          }
+        ]
+      },
+      {
         "id": "E5_low",
         "symbol": "E5",
         "fingering": [
@@ -149,6 +181,22 @@
             "string": 4,
             "fret": 7,
             "finger": 2
+          }
+        ]
+      },
+      {
+        "id": "D#",
+        "symbol": "D#",
+        "fingering": [
+          {
+            "string": 5,
+            "fret": 6,
+            "finger": 1
+          },
+          {
+            "string": 4,
+            "fret": 7,
+            "finger": 3
           }
         ]
       },
@@ -197,7 +245,7 @@
       "startTick": 18480,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "up"
+      "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
@@ -855,98 +903,112 @@
       "startTick": 48480,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 48720,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 48960,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 49200,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 49440,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 49680,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 49920,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 50160,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 50400,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 50640,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 50880,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 51120,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 51360,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 51600,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -960,98 +1022,112 @@
       "startTick": 52320,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 52560,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 52800,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 53040,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 53280,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 53520,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 53760,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 54000,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 54240,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 54480,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 54720,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 54960,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 55200,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 55440,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1065,98 +1141,112 @@
       "startTick": 56160,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 56400,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 56640,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 56880,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 57120,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 57360,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 57600,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 57840,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 58080,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 58320,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 58560,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 58800,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 59040,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 59280,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1170,98 +1260,112 @@
       "startTick": 60000,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 60240,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 60480,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 60720,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 60960,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 61200,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 61440,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 61680,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 61920,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 62160,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 62400,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 62640,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 62880,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 63120,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1275,98 +1379,112 @@
       "startTick": 63840,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 64080,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 64320,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 64560,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 64800,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 65040,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 65280,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 65520,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 65760,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 66000,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 66240,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 66480,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 66720,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 66960,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1380,98 +1498,112 @@
       "startTick": 67680,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 67920,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 68160,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 68400,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 68640,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 68880,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 69120,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 69360,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 69600,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 69840,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 70080,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 70320,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 70560,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 70800,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1485,98 +1617,112 @@
       "startTick": 71520,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 71760,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 72000,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 72240,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 72480,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 72720,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 72960,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 73200,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 73440,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 73680,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 73920,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 74160,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 74400,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 74640,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1590,49 +1736,56 @@
       "startTick": 75360,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 75600,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 75840,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 76080,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 76320,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 76560,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 76800,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1695,42 +1848,48 @@
       "startTick": 79200,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 79440,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 79680,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 79920,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 80160,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 80400,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1744,42 +1903,48 @@
       "startTick": 81120,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 81360,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 81600,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 81840,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 82080,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 82320,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1793,42 +1958,48 @@
       "startTick": 83040,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 83280,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 83520,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 83760,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 84000,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 84240,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1842,42 +2013,48 @@
       "startTick": 84960,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 85200,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 85440,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 85680,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 85920,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 86160,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -1891,49 +2068,56 @@
       "startTick": 86880,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 87120,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 87360,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 87600,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 87840,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 88080,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 88320,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -3116,98 +3300,112 @@
       "startTick": 140640,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 140880,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 141120,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 141360,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 141600,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 141840,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 142080,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 142320,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 142560,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 142800,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 143040,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 143280,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 143520,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 143760,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -3221,98 +3419,112 @@
       "startTick": 144480,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 144720,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 144960,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 145200,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 145440,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 145680,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 145920,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 146160,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 146400,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 146640,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 146880,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 147120,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 147360,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 147600,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -3326,98 +3538,112 @@
       "startTick": 148320,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 148560,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 148800,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 149040,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 149280,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 149520,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 149760,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 150000,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 150240,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 150480,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 150720,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 150960,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 151200,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 151440,
       "durationTick": 240,
       "chordId": "A5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -3431,112 +3657,128 @@
       "startTick": 152160,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 152400,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 152640,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 152880,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 153120,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 153360,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 153600,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 153840,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 154080,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 154320,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 154560,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 154800,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 155040,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 155280,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 155520,
       "durationTick": 240,
-      "chordId": "G5",
-      "strumTechnique": "down"
+      "chordId": "chord_7",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 155760,
       "durationTick": 240,
-      "chordId": "G5",
-      "strumTechnique": "down"
+      "chordId": "chord_7",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3563,8 +3805,9 @@
       "interpretation": "chord",
       "startTick": 156960,
       "durationTick": 240,
-      "chordId": "G5",
-      "strumTechnique": "down"
+      "chordId": "chord_7",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3584,8 +3827,9 @@
       "interpretation": "chord",
       "startTick": 157920,
       "durationTick": 240,
-      "chordId": "G5",
-      "strumTechnique": "down"
+      "chordId": "chord_7",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3619,15 +3863,17 @@
       "interpretation": "chord",
       "startTick": 159360,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 159600,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3654,8 +3900,9 @@
       "interpretation": "chord",
       "startTick": 160800,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3675,8 +3922,9 @@
       "interpretation": "chord",
       "startTick": 161760,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3710,15 +3958,17 @@
       "interpretation": "chord",
       "startTick": 163200,
       "durationTick": 240,
-      "chordId": "A5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 163440,
       "durationTick": 240,
-      "chordId": "A5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3745,8 +3995,9 @@
       "interpretation": "chord",
       "startTick": 164640,
       "durationTick": 240,
-      "chordId": "A5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3766,8 +4017,9 @@
       "interpretation": "chord",
       "startTick": 165600,
       "durationTick": 240,
-      "chordId": "A5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3801,15 +4053,17 @@
       "interpretation": "chord",
       "startTick": 167040,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 167280,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3836,8 +4090,9 @@
       "interpretation": "chord",
       "startTick": 168480,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -3907,42 +4162,48 @@
       "startTick": 171360,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 171600,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 171840,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 172080,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 172320,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 172560,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -3956,42 +4217,48 @@
       "startTick": 173280,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 173520,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 173760,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 174000,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 174240,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 174480,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4005,42 +4272,48 @@
       "startTick": 175200,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 175440,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 175680,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 175920,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 176160,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 176400,
       "durationTick": 240,
       "chordId": "E5_high",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4054,42 +4327,48 @@
       "startTick": 177120,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 177360,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 177600,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 177840,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 178080,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 178320,
       "durationTick": 240,
       "chordId": "B5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4103,49 +4382,56 @@
       "startTick": 179040,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 179280,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 179520,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 179760,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 180000,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 180240,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 180480,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4313,35 +4599,40 @@
       "startTick": 186240,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 186480,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 187680,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 187920,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 189120,
       "durationTick": 240,
       "chordId": "C5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4355,91 +4646,104 @@
       "startTick": 190080,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 190320,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 191520,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 191760,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 192960,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 193200,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 193440,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 193680,
       "durationTick": 240,
       "chordId": "D5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 193920,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 194160,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 195360,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 195600,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 196800,
       "durationTick": 240,
       "chordId": "G5",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4453,28 +4757,32 @@
       "startTick": 197760,
       "durationTick": 240,
       "chordId": "E5_low",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 198000,
       "durationTick": 240,
       "chordId": "E5_low",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 199200,
       "durationTick": 240,
       "chordId": "E5_low",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
       "startTick": 199440,
       "durationTick": 240,
       "chordId": "E5_low",
-      "strumTechnique": "down"
+      "strumTechnique": "down",
+      "technique": "palm_mute"
     },
     {
       "interpretation": "chord",
@@ -4536,29 +4844,33 @@
       "interpretation": "chord",
       "startTick": 202080,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 202320,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 202560,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 202800,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -4578,36 +4890,41 @@
       "interpretation": "chord",
       "startTick": 203520,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 203760,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 204000,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 204240,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 204480,
       "durationTick": 240,
-      "chordId": "C5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -4634,29 +4951,33 @@
       "interpretation": "chord",
       "startTick": 205920,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 206160,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 206400,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 206640,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -4676,36 +4997,41 @@
       "interpretation": "chord",
       "startTick": 207360,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 207600,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 207840,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 208080,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 208320,
       "durationTick": 240,
-      "chordId": "D5",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -4732,29 +5058,33 @@
       "interpretation": "chord",
       "startTick": 209760,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 210000,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 210240,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 210480,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
@@ -4774,49 +5104,51 @@
       "interpretation": "chord",
       "startTick": 211200,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 211440,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 211680,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 211920,
       "durationTick": 240,
-      "chordId": "B7",
-      "strumTechnique": "down"
+      "chordId": "chord_8",
+      "strumTechnique": "down",
+      "technique": "cutting"
     },
     {
       "interpretation": "chord",
       "startTick": 212160,
       "durationTick": 320,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 212480,
       "durationTick": 320,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 212800,
       "durationTick": 320,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
@@ -5809,8 +6141,8 @@
       "interpretation": "single",
       "startTick": 269760,
       "durationTick": 320,
-      "string": 4,
-      "fret": 0,
+      "string": 5,
+      "fret": 3,
       "finger": 0,
       "technique": "normal"
     },

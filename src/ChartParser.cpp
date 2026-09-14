@@ -87,7 +87,7 @@ bool loadChart(const std::string &path, Chart &chart) {
         return false;
 
     const std::string schemaVersion = root["schemaVersion"].get<std::string>();
-    if (schemaVersion != "0.1.0" && schemaVersion != "0.2.0")
+    if (schemaVersion != "0.1.0" && schemaVersion != "0.2.0" && schemaVersion != "0.2.1")
         return false;
 
     const nlohmann::json &song = root["song"];
@@ -111,7 +111,20 @@ bool loadChart(const std::string &path, Chart &chart) {
     chart.tuning = track["tuning"].get<std::vector<std::string>>();
 
     for (const nlohmann::json &noteJson : root["notes"]) {
-        if (schemaVersion == "0.2.0" && noteJson["interpretation"] == "chord") {
+        if ((schemaVersion == "0.2.0" || schemaVersion == "0.2.1") &&
+            noteJson["interpretation"] == "chord") {
+            if (noteJson.value("technique", "") == "cutting") {
+                ChartNote note = {};
+                note.interpretation = "chord";
+                note.technique = "cutting";
+                note.startTick = noteJson["startTick"].get<int>();
+                note.durationTick = noteJson["durationTick"].get<int>();
+                note.startMs = tickToMs(note.startTick, chart.bpm, chart.resolution, chart.audioOffsetMs);
+                note.durationMs = tickToMs(note.durationTick, chart.bpm, chart.resolution);
+                chart.notes.push_back(note);
+                continue;
+            }
+
             const std::string chordId = noteJson["chordId"].get<std::string>();
             for (const nlohmann::json &chordJson : track["chordDefinitions"]) {
                 if (chordJson["id"] != chordId)
@@ -126,6 +139,7 @@ bool loadChart(const std::string &path, Chart &chart) {
                 note.noteName = chordJson["symbol"].get<std::string>();
                 note.chordId = chordId;
                 note.strumTechnique = noteJson["strumTechnique"].get<std::string>();
+                note.technique = noteJson.value("technique", "");
 
                 for (const nlohmann::json &fingeringJson : chordJson["fingering"]) {
                     int fret = fingeringJson["fret"].get<int>();
