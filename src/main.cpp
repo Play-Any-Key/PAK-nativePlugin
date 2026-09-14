@@ -173,6 +173,7 @@ extern "C" PLUGIN_API void ResetSessionTime(void) {
     g_state.passedChordJudgments.store(0);
     g_state.failedChordJudgments.store(0);
     g_state.lastGuitarInputEventAudioTimeMs.store(-g_state.guitarInputIntervalMs.load());
+    g_state.lastAcceptedJudgeOnsetAudioTimeMs.store(-1000000.0);
     if (g_state.onsetDetector)
         aubio_onset_reset(g_state.onsetDetector);
     preparePluginEventQueue(&g_state.eventQueue, 64);
@@ -472,9 +473,15 @@ extern "C" PLUGIN_API int FeedJudgeTestAudio(const int16_t *samples, unsigned in
     return 0;
 }
 
-extern "C" PLUGIN_API void SetIgnoreOnsetsDuringJudgmentCollection(int enabled) {
-    // Selects whether one pending pitch or chord judgment locks out new onsets.
-    g_state.ignoreOnsetsDuringJudgmentCollection.store(enabled != 0);
+extern "C" PLUGIN_API void SetJudgeOnsetBlockMs(double blockMs) {
+    // Sets the debounce duration applied after accepting one onset for judgment.
+    g_state.judgeOnsetBlockMs.store(blockMs < 0.0 ? 0.0 : blockMs);
+}
+
+extern "C" PLUGIN_API void SetOnsetSilence(float silenceDb) {
+    // Sets the minimum input level required before aubio accepts an onset.
+    if (g_state.onsetDetector)
+        aubio_onset_set_silence(g_state.onsetDetector, silenceDb);
 }
 
 extern "C" PLUGIN_API int GetJudgeProcessingStats(JudgeProcessingStats *outStats) {

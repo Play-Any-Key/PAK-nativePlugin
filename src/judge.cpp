@@ -470,8 +470,8 @@ void processJudgmentBlock(PluginState *state, AudioBlock *block) {
 
     int noteIndex = state->nextNoteIndex.load();
     if (hasOnset && noteIndex < (int)state->chart.notes.size() &&
-        (!state->ignoreOnsetsDuringJudgmentCollection.load() ||
-         state->pendingJudgments.empty())) {
+        onsetAudioTimeMs - state->lastAcceptedJudgeOnsetAudioTimeMs.load() >=
+            state->judgeOnsetBlockMs.load()) {
         const ChartParser::ChartNote &note = state->chart.notes[noteIndex];
         double errorMs = onsetChartTimeMs - note.startMs;
         double absErrorMs = std::abs(errorMs);
@@ -488,6 +488,7 @@ void processJudgmentBlock(PluginState *state, AudioBlock *block) {
                                                0,
                                                0,
                                                {}});
+            state->lastAcceptedJudgeOnsetAudioTimeMs.store(onsetAudioTimeMs);
             noteIndex++;
             state->nextNoteIndex.store(noteIndex);
         }

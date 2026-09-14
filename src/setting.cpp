@@ -46,7 +46,8 @@ static int initializeAudioDriver(RtAudio::Api api,
     g_state.sampleRate = sampleRate;
     g_state.bufferFrames = 128;
     g_state.nextNoteIndex.store(0);
-    g_state.ignoreOnsetsDuringJudgmentCollection.store(false);
+    g_state.judgeOnsetBlockMs.store(100.0);
+    g_state.lastAcceptedJudgeOnsetAudioTimeMs.store(-1000000.0);
     g_state.lastDetectedMidi = -1;
     g_state.input = nullptr;
     g_state.pitch = nullptr;
@@ -135,6 +136,7 @@ static int initializeAudioDriver(RtAudio::Api api,
     g_state.chordFft = new_aubio_fft(CHORD_FFT_SIZE);
     aubio_pitch_set_unit(g_state.pitchDetector, "midi");
     aubio_onset_set_threshold(g_state.onsetDetector, 0.04f);
+    aubio_onset_set_silence(g_state.onsetDetector, -45.0f);
     if (!initializeSongDecoder()) {
         Shutdown();
         return -1;
@@ -185,7 +187,8 @@ extern "C" PLUGIN_API int InitializeFingeringTest(unsigned int channels,
     g_state.channels = channels;
     g_state.sampleRate = sampleRate;
     g_state.bufferFrames = 128;
-    g_state.ignoreOnsetsDuringJudgmentCollection.store(false);
+    g_state.judgeOnsetBlockMs.store(100.0);
+    g_state.lastAcceptedJudgeOnsetAudioTimeMs.store(-1000000.0);
     g_state.inputGain.store(4.0f);
     g_state.outputGain.store(0.5f);
     g_state.songVolume.store(1.0f);
@@ -220,6 +223,7 @@ extern "C" PLUGIN_API int InitializeFingeringTest(unsigned int channels,
     g_state.chordFft = new_aubio_fft(CHORD_FFT_SIZE);
     aubio_pitch_set_unit(g_state.pitchDetector, "midi");
     aubio_onset_set_threshold(g_state.onsetDetector, onsetThreshold);
+    aubio_onset_set_silence(g_state.onsetDetector, -45.0f);
     return initializeSongDecoder() ? 0 : -1;
 }
 

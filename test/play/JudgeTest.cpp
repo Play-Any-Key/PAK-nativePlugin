@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
+#include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <thread>
@@ -27,7 +29,8 @@ struct PluginApi {
     int (*LoadChart)(const char *);
     int (*StartJudgeTestSession)(void);
     int (*FeedJudgeTestAudio)(const int16_t *, unsigned int);
-    void (*SetIgnoreOnsetsDuringJudgmentCollection)(int);
+    void (*SetJudgeOnsetBlockMs)(double);
+    void (*SetOnsetSilence)(float);
     int (*PollJudgeEvent)(JudgeEvent *);
     void (*StopSession)(void);
     void (*Shutdown)(void);
@@ -41,10 +44,41 @@ struct JudgeSummary {
     unsigned int wrong;
 };
 
+class TeeStreamBuffer : public std::streambuf {
+   public:
+    // Writes one CLI stream to both its original console buffer and the test log.
+    TeeStreamBuffer(std::streambuf *console, std::streambuf *log) : console_(console), log_(log) {}
+
+   protected:
+    int_type overflow(int_type character) override {
+        if (traits_type::eq_int_type(character, traits_type::eof()))
+            return traits_type::not_eof(character);
+        char text = traits_type::to_char_type(character);
+        if (traits_type::eq_int_type(console_->sputc(text), traits_type::eof()) ||
+            traits_type::eq_int_type(log_->sputc(text), traits_type::eof()))
+            return traits_type::eof();
+        return character;
+    }
+
+    int sync() override {
+        return console_->pubsync() == 0 && log_->pubsync() == 0 ? 0 : -1;
+    }
+
+    std::streamsize xsputn(const char *text, std::streamsize count) override {
+        std::streamsize consoleCount = console_->sputn(text, count);
+        std::streamsize logCount = log_->sputn(text, count);
+        return std::min(consoleCount, logCount);
+    }
+
+   private:
+    std::streambuf *console_;
+    std::streambuf *log_;
+};
+
 void usage() {
     // Prints the optional audio, chart, DLL, and onset parameters for this replay test.
     std::cout << "usage: JudgeTest <guitarMp3Path> <chartPath> <dllPath> <onsetMethod> "
-                 "<onsetThreshold> <ignoreOnsetsDuringCollection>\n";
+                 "<onsetThreshold> <onsetBlockMs> <onsetSilenceDb>\n";
     std::exit(0);
 }
 
@@ -74,9 +108,8 @@ bool loadPlugin(const std::string &dllPath, PluginApi *plugin) {
            loadPluginFunction(plugin, "LoadChart", &plugin->LoadChart) &&
            loadPluginFunction(plugin, "StartJudgeTestSession", &plugin->StartJudgeTestSession) &&
            loadPluginFunction(plugin, "FeedJudgeTestAudio", &plugin->FeedJudgeTestAudio) &&
-           loadPluginFunction(plugin,
-                              "SetIgnoreOnsetsDuringJudgmentCollection",
-                              &plugin->SetIgnoreOnsetsDuringJudgmentCollection) &&
+           loadPluginFunction(plugin, "SetJudgeOnsetBlockMs", &plugin->SetJudgeOnsetBlockMs) &&
+           loadPluginFunction(plugin, "SetOnsetSilence", &plugin->SetOnsetSilence) &&
            loadPluginFunction(plugin, "PollJudgeEvent", &plugin->PollJudgeEvent) &&
            loadPluginFunction(plugin, "StopSession", &plugin->StopSession) &&
            loadPluginFunction(plugin, "Shutdown", &plugin->Shutdown);
@@ -178,8 +211,12 @@ int main(int argc, char *argv[]) {
     std::string dllPath = PAK_DEFAULT_DLL_PATH;
     std::string onsetMethod = "default";
     float onsetThreshold = 0.04f;
-    int ignoreOnsetsDuringCollection = 0;
-    if (argc > 7)
+    double onsetBlockMs = 100.0;
+    float onsetSilenceDb = -45.0f;
+    std::string onsetThresholdText = "0.04";
+    std::string onsetBlockMsText = "100";
+    std::string onsetSilenceDbText = "-45";
+    if (argc > 8)
         usage();
     if (argc > 1)
         mp3Path = argv[1];
@@ -189,14 +226,41 @@ int main(int argc, char *argv[]) {
         dllPath = argv[3];
     if (argc > 4)
         onsetMethod = argv[4];
-    if (argc > 5)
+    if (argc > 5) {
         onsetThreshold = std::strtof(argv[5], nullptr);
-    if (argc > 6)
-        ignoreOnsetsDuringCollection = std::atoi(argv[6]);
+        onsetThresholdText = argv[5];
+    }
+    if (argc > 6) {
+        onsetBlockMs = std::strtod(argv[6], nullptr);
+        onsetBlockMsText = argv[6];
+    }
+    if (argc > 7) {
+        onsetSilenceDb = std::strtof(argv[7], nullptr);
+        onsetSilenceDbText = argv[7];
+    }
+
+    std::string logPath = std::string(PAK_SOURCE_DIR) +
+                          u8"/docs/JudgeStability/JudgeTest/JudgeTest_" + onsetMethod + "_" +
+                          onsetThresholdText + "_" + onsetBlockMsText + "_" + onsetSilenceDbText +
+                          ".log";
+    std::ofstream logFile(std::filesystem::u8path(logPath));
+    if (!logFile) {
+        std::cerr << "Failed to open test log: " << logPath << "\n";
+        return 1;
+    }
+    std::streambuf *consoleOutput = std::cout.rdbuf();
+    std::streambuf *consoleError = std::cerr.rdbuf();
+    TeeStreamBuffer outputBuffer(consoleOutput, logFile.rdbuf());
+    TeeStreamBuffer errorBuffer(consoleError, logFile.rdbuf());
+    std::cout.rdbuf(&outputBuffer);
+    std::cerr.rdbuf(&errorBuffer);
+    std::cout << "Log: " << logPath << "\n";
 
     ChartParser::Chart chart = {};
     if (!ChartParser::loadChart(chartPath, chart)) {
         std::cerr << "Failed to load chart: " << chartPath << "\n";
+        std::cout.rdbuf(consoleOutput);
+        std::cerr.rdbuf(consoleError);
         return 1;
     }
 
@@ -205,12 +269,16 @@ int main(int argc, char *argv[]) {
     unsigned int channels = 0;
     if (!decodeMp3(mp3Path, &samples, &sampleRate, &channels)) {
         std::cerr << "Failed to decode guitar reference: " << mp3Path << "\n";
+        std::cout.rdbuf(consoleOutput);
+        std::cerr.rdbuf(consoleError);
         return 1;
     }
 
     PluginApi plugin = {};
     if (!loadPlugin(dllPath, &plugin)) {
         std::cerr << "Failed to load plugin: " << dllPath << "\n";
+        std::cout.rdbuf(consoleOutput);
+        std::cerr.rdbuf(consoleError);
         return 1;
     }
 
@@ -218,18 +286,22 @@ int main(int argc, char *argv[]) {
     JudgeSummary summary = {};
     std::vector<int16_t> block(128 * channels, 0);
     auto nextBlockAt = std::chrono::steady_clock::now();
-    if (plugin.InitializeJudgeTest(channels, sampleRate, onsetMethod.c_str(), onsetThreshold) !=
-            0 ||
-        plugin.LoadChart(chartPath.c_str()) != 0 || plugin.StartJudgeTestSession() != 0) {
+    if (plugin.InitializeJudgeTest(channels, sampleRate, onsetMethod.c_str(), onsetThreshold) != 0 ||
+        plugin.LoadChart(chartPath.c_str()) != 0) {
         std::cerr << "Failed to start the guitar reference replay.\n";
         goto cleanup;
     }
-    plugin.SetIgnoreOnsetsDuringJudgmentCollection(ignoreOnsetsDuringCollection);
+    plugin.SetJudgeOnsetBlockMs(onsetBlockMs);
+    plugin.SetOnsetSilence(onsetSilenceDb);
+    if (plugin.StartJudgeTestSession() != 0) {
+        std::cerr << "Failed to start the guitar reference replay.\n";
+        goto cleanup;
+    }
 
     std::cout << "Replaying: " << mp3Path << "\n";
     std::cout << "Chart: " << chart.title << " / " << chart.difficulty << "\n";
-    std::cout << "Ignore onsets during collection: "
-              << (ignoreOnsetsDuringCollection != 0 ? "on" : "off") << "\n";
+    std::cout << "Onset block: " << onsetBlockMs << " ms\n";
+    std::cout << "Onset silence: " << onsetSilenceDb << " dBFS\n";
     std::cout << "Note, Judge, Chord, Onset(ms), Error(ms)\n";
     for (size_t offset = 0; offset < samples.size(); offset += block.size()) {
         std::fill(block.begin(), block.end(), 0);
@@ -276,5 +348,10 @@ cleanup:
 #ifdef _WIN32
     FreeLibrary(plugin.module);
 #endif
+    std::cout.flush();
+    std::cerr.flush();
+    logFile.flush();
+    std::cout.rdbuf(consoleOutput);
+    std::cerr.rdbuf(consoleError);
     return result;
 }

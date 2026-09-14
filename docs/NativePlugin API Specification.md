@@ -5,12 +5,13 @@ Unity에서 `PAKNativePlugin.dll`을 호출하기 위한 C API 명세서입니�
 ## 기본 정보
 
 - DLL 이름: `PAKNativePlugin`
+- version: 0.5.2
 - ABI: C ABI (`extern "C"`)
 - Windows export: `__declspec(dllexport)`
 - 오디오 샘플 포맷: signed 16-bit PCM
 - 내부 버퍼 크기: 128 frames
 - 세션 시작 전 카운트다운: 5000 ms
-- 지원 채보 버전: `0.1.0`, `0.2.0`
+- 지원 채보 버전: `0.2.1`
 - NAM 모델: `assets/NAM/VX TB30 BR Edge0 BAL2 CAB FREE.nam`
 
 ## 호출 순서
@@ -428,20 +429,22 @@ public static class PakNativePlugin
 | 0   | `Perfect` | 타이밍 오차가 60 ms 이하이고 피치가 일치  |
 | 1   | `Good`    | 타이밍 오차가 140 ms 이하이고 피치가 일치 |
 | 2   | `Bad`     | 타이밍 오차가 240 ms 이하이고 피치가 일치 |
-| 3   | `Miss`    | 타이밍 범위를 벗어났거나 입력이 없음     |
-| 4   | `Wrong`   | 타이밍 범위 안이지만 피치가 불일치       |
+| 3   | `Miss`    | 타이밍 범위를 벗어났거나 입력이 없음      |
+| 4   | `Wrong`   | 타이밍 범위 안이지만 피치가 불일치        |
 
 `single` 이벤트의 피치 판정은 목표 MIDI와 감지 MIDI가 정확히 같아야 통과합니다.
 `chord` 이벤트는 아래의 CG-FPM 코드 판정 결과가 일치해야 통과합니다.
 
 ## 채보 interpretation과 코드 판정
 
-`schemaVersion: "0.2.0"`의 각 `notes` 이벤트는 `interpretation`으로 판정 방식을 지정합니다.
+`schemaVersion: "0.2.1"`의 각 `notes` 이벤트는 `interpretation`으로 판정 방식을 지정합니다.
 
-| `interpretation` | 채보 필수 정보 | 판정 방식 | 플러그인 이벤트 수 |
-| ---------------- | -------------- | --------- | ------------------ |
-| `single` | `string`, `fret`, `finger`, `technique` | aubio MIDI 피치 판정 | 노트당 1개 |
-| `chord` | `chordId`, `strumTechnique` | CG-FPM 코드 판정 | 코드 이벤트당 1개 |
+| `interpretation` | 채보 필수 정보                          | 판정 방식            | 플러그인 이벤트 수 |
+| ---------------- | --------------------------------------- | -------------------- | ------------------ |
+| `single`         | `string`, `fret`, `finger`, `technique` | aubio MIDI 피치 판정 | 노트당 1개         |
+| `chord`          | `chordId`, `strumTechnique`             | CG-FPM 코드 판정     | 코드 이벤트당 1개  |
+
+`single` 이벤트의 `technique`에는 `normal`, `hammer_on`, `pull_off`, `slide`, `bend`, `palm_mute`, `cutting`을 사용합니다. `0.2.1`부터 `dead_note`는 제거되고 `cutting`이 추가되었습니다.
 
 `chordId`는 `track.chordDefinitions`의 `id`를 참조합니다. 플러그인은 해당 코드의 `fingering`과 `track.tuning`으로 실제 MIDI 음 목록을 계산합니다. 뮤트(`fret: -1`) 줄은 코드 판정 대상에서 제외합니다.
 
@@ -479,18 +482,18 @@ CG-HCM은 채보가 요구하는 코드가 입력 스펙트럼에 포함됐는�
 
 `PollJudgeEvent`로 가져오는 노트 1개의 판정 결과입니다.
 
-| 필드                | 타입       | 의미                                  |
-| ------------------- | ---------- | ------------------------------------- |
-| `noteIndex`         | `int`      | 채보의 노트 인덱스. 0부터 시작        |
-| `result`            | `int`      | `JudgeResult` 값                      |
-| `judgedAudioTimeMs` | `double`   | 플러그인 오디오 스트림 기준 판정 시각 |
-| `judgedChartTimeMs` | `double`   | 채보 기준 판정 시각                   |
-| `errorMs`           | `float`    | `judgedChartTimeMs - startMs`         |
-| `detectedMidi`      | `int`      | `single`: 감지 MIDI. 감지되지 않으면 0 / `chord`: 0 (사용 안 함) |
-| `targetMidi`        | `int`      | `single`: 목표 MIDI / `chord`: 0 (사용 안 함) |
-| `stringNumber`      | `int`      | `single`: 기타 줄 번호 / `chord`: 0 (사용 안 함) |
-| `fret`              | `int`      | `single`: 프렛 번호 / `chord`: 0 (사용 안 함) |
-| `startMs`           | `int`      | 채보 노트 시작 시각                   |
+| 필드                | 타입       | 의미                                                                         |
+| ------------------- | ---------- | ---------------------------------------------------------------------------- |
+| `noteIndex`         | `int`      | 채보의 노트 인덱스. 0부터 시작                                               |
+| `result`            | `int`      | `JudgeResult` 값                                                             |
+| `judgedAudioTimeMs` | `double`   | 플러그인 오디오 스트림 기준 판정 시각                                        |
+| `judgedChartTimeMs` | `double`   | 채보 기준 판정 시각                                                          |
+| `errorMs`           | `float`    | `judgedChartTimeMs - startMs`                                                |
+| `detectedMidi`      | `int`      | `single`: 감지 MIDI. 감지되지 않으면 0 / `chord`: 0 (사용 안 함)             |
+| `targetMidi`        | `int`      | `single`: 목표 MIDI / `chord`: 0 (사용 안 함)                                |
+| `stringNumber`      | `int`      | `single`: 기타 줄 번호 / `chord`: 0 (사용 안 함)                             |
+| `fret`              | `int`      | `single`: 프렛 번호 / `chord`: 0 (사용 안 함)                                |
+| `startMs`           | `int`      | 채보 노트 시작 시각                                                          |
 | `noteName`          | `char[16]` | `single`: 목표 음 이름. 예: `E2`, `F#3` / `chord`: 코드 기호. 예: `C`, `Am7` |
 
 `chord` 이벤트에 대해 `detectedMidi`와 `targetMidi`를 비교하면 안 됩니다. 두 필드는 0이므로, 예를 들어 `MIDI 48/0`은 코드의 목표 MIDI가 0이라는 뜻이지 입력이 없었다는 뜻은 아닙니다.
@@ -515,21 +518,21 @@ MIDI 피치가 감지되지 않으면 이벤트를 발생시키지 않습니다.
 
 `GetAudioStats`로 가져오는 현재 세션 상태입니다.
 
-| 필드                 | 타입     | 의미                                           |
-| -------------------- | -------- | ---------------------------------------------- |
-| `streamTime`         | `double` | 세션 기준 스트림 시간. 초 단위                 |
-| `audioTimeMs`        | `double` | 오디오 스트림 시간. ms 단위                    |
+| 필드                 | 타입     | 의미                                                                                        |
+| -------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| `streamTime`         | `double` | 세션 기준 스트림 시간. 초 단위                                                              |
+| `audioTimeMs`        | `double` | 오디오 스트림 시간. ms 단위                                                                 |
 | `chartTimeMs`        | `double` | 채보 시간. 천천히 재생 연습에서는 설정한 속도로 진행, 운지 연습에서는 현재 노트 시각에 고정 |
-| `countdownMs`        | `double` | 세션 시작 전 카운트다운 시간. 현재 5000        |
-| `streamLatency`      | `int`    | RtAudio 스트림 지연                            |
-| `bufferFrames`       | `uint`   | 내부 오디오 버퍼 프레임 수. 현재 128           |
-| `droppedAudioBlocks` | `uint`   | 판정 스레드로 전달하지 못한 오디오 블록 수     |
-| `droppedJudgeEvents` | `uint`   | Unity가 늦게 polling해서 버려진 판정 이벤트 수 |
-| `totalNotes`         | `int`    | 로드된 채보의 전체 노트 수                     |
-| `nextNoteIndex`      | `int`    | 다음 판정 대상 노트 인덱스                     |
-| `isRunning`          | `int`    | 오디오 스트림 실행 중이면 1, 아니면 0          |
-| `isFinished`         | `int`    | 모든 노트 판정이 끝났으면 1, 아니면 0          |
-| `isPaused`           | `int`    | 세션이 일시정지 상태이면 1, 아니면 0           |
+| `countdownMs`        | `double` | 세션 시작 전 카운트다운 시간. 현재 5000                                                     |
+| `streamLatency`      | `int`    | RtAudio 스트림 지연                                                                         |
+| `bufferFrames`       | `uint`   | 내부 오디오 버퍼 프레임 수. 현재 128                                                        |
+| `droppedAudioBlocks` | `uint`   | 판정 스레드로 전달하지 못한 오디오 블록 수                                                  |
+| `droppedJudgeEvents` | `uint`   | Unity가 늦게 polling해서 버려진 판정 이벤트 수                                              |
+| `totalNotes`         | `int`    | 로드된 채보의 전체 노트 수                                                                  |
+| `nextNoteIndex`      | `int`    | 다음 판정 대상 노트 인덱스                                                                  |
+| `isRunning`          | `int`    | 오디오 스트림 실행 중이면 1, 아니면 0                                                       |
+| `isFinished`         | `int`    | 모든 노트 판정이 끝났으면 1, 아니면 0                                                       |
+| `isPaused`           | `int`    | 세션이 일시정지 상태이면 1, 아니면 0                                                        |
 
 `chartTimeMs`가 0보다 작으면 카운트다운 구간입니다.
 
@@ -643,7 +646,7 @@ int LoadChart(const char *chartPath);
 채보는 `schemaVersion`, `song`, `track`, `notes` 구조를 사용합니다.
 노트의 `startTick`은 BPM과 resolution을 기준으로 ms로 변환됩니다.
 
-`0.2.0` chord 이벤트 예시:
+`0.2.1` chord 이벤트 예시:
 
 ```json
 {
@@ -850,10 +853,10 @@ onset으로 judgment를 시작했으면 `1`, 시작하지 못했으면 `0`입니
 - `1`: onset 있음
 - `0`: 대기 중 onset 없음
 
-| 필드 | 타입 | 의미 |
-| --- | --- | --- |
-| `audioTimeMs` | `double` | aubio가 보고한 plugin audio stream 기준 onset 시각 |
-| `startedJudgment` | `int` | judgment 생성 여부. 0 또는 1 |
+| 필드              | 타입     | 의미                                               |
+| ----------------- | -------- | -------------------------------------------------- |
+| `audioTimeMs`     | `double` | aubio가 보고한 plugin audio stream 기준 onset 시각 |
+| `startedJudgment` | `int`    | judgment 생성 여부. 0 또는 1                       |
 
 ### PollJudgeEvent
 
@@ -927,12 +930,12 @@ int GetJudgmentDiagnostics(JudgmentDiagnostics *outDiagnostics);
 운지 연습의 onset 전달과 chord 판정 수를 가져옵니다. raw onset detector 문제와 judgment
 구조 또는 chord 판정 문제를 분리하는 진단용 API입니다.
 
-| 필드 | 타입 | 의미 |
-| --- | --- | --- |
-| `detectedOnsets` | `uint` | raw onset 검출 수 |
-| `startedFingeringJudgments` | `uint` | raw onset에서 시작한 운지 judgment 수 |
-| `passedChordJudgments` | `uint` | G5 fundamental 판정을 통과한 chord judgment 수 |
-| `failedChordJudgments` | `uint` | G5 fundamental 판정에 실패한 chord judgment 수 |
+| 필드                        | 타입   | 의미                                           |
+| --------------------------- | ------ | ---------------------------------------------- |
+| `detectedOnsets`            | `uint` | raw onset 검출 수                              |
+| `startedFingeringJudgments` | `uint` | raw onset에서 시작한 운지 judgment 수          |
+| `passedChordJudgments`      | `uint` | G5 fundamental 판정을 통과한 chord judgment 수 |
+| `failedChordJudgments`      | `uint` | G5 fundamental 판정에 실패한 chord judgment 수 |
 
 반환값:
 
@@ -948,11 +951,11 @@ int GetJudgeProcessingStats(JudgeProcessingStats *outStats);
 장치 callback-to-judge audio queue의 처리 수를 가져옵니다. 실시간 입력에서 queue drop을
 점검할 때 사용합니다.
 
-| 필드 | 타입 | 의미 |
-| --- | --- | --- |
-| `queuedAudioBlocks` | `uint` | queue에 넣은 audio block 수 |
+| 필드                   | 타입   | 의미                                 |
+| ---------------------- | ------ | ------------------------------------ |
+| `queuedAudioBlocks`    | `uint` | queue에 넣은 audio block 수          |
 | `processedAudioBlocks` | `uint` | judge thread가 처리한 audio block 수 |
-| `droppedAudioBlocks` | `uint` | queue가 가득 차 버린 audio block 수 |
+| `droppedAudioBlocks`   | `uint` | queue가 가득 차 버린 audio block 수  |
 
 반환값:
 
@@ -970,12 +973,12 @@ int GetSongSyncInfo(SongSyncInfo *outInfo);
 기타 입력과 믹싱되어 DLL의 RtAudio 출력과 DSP를 통과합니다. `StartSlowPracticeSession`에서는
 곡 대신 메트로놈을 믹싱합니다.
 
-| 필드 | 타입 | 의미 |
-| --- | --- | --- |
-| `audioFile` | `char[260]` | 채보 `song.audioFile` 경로 |
-| `audioOffsetMs` | `int` | 채보 tick 변환에 사용된 `song.audioOffsetMs` |
-| `durationMs` | `int` | 채보에 기록된 곡 길이 |
-| `songTimeMs` | `double` | 곡 시작 기준 재생 시각. 천천히 재생 연습에서는 채보 시각 |
+| 필드            | 타입        | 의미                                                     |
+| --------------- | ----------- | -------------------------------------------------------- |
+| `audioFile`     | `char[260]` | 채보 `song.audioFile` 경로                               |
+| `audioOffsetMs` | `int`       | 채보 tick 변환에 사용된 `song.audioOffsetMs`             |
+| `durationMs`    | `int`       | 채보에 기록된 곡 길이                                    |
+| `songTimeMs`    | `double`    | 곡 시작 기준 재생 시각. 천천히 재생 연습에서는 채보 시각 |
 
 `songTimeMs`는 DLL이 실제로 출력하는 곡의 재생 위치입니다. 카운트다운 중에는 음수이며,
 0 이상부터 곡 PCM이 RtAudio 출력에 믹싱됩니다.

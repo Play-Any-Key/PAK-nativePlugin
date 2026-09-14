@@ -206,8 +206,11 @@ PLUGIN_API int StartJudgeTestSession(void);
 // Queues one recorded audio block through the regular rhythm-judge path.
 PLUGIN_API int FeedJudgeTestAudio(const int16_t *samples, unsigned int frames);
 
-// Chooses whether new onsets are ignored while a previous judgment is collecting audio.
-PLUGIN_API void SetIgnoreOnsetsDuringJudgmentCollection(int enabled);
+// Sets how long new onsets are ignored after one onset is accepted for judgment.
+PLUGIN_API void SetJudgeOnsetBlockMs(double blockMs);
+
+// Sets the minimum input level in dBFS required for an onset to be detected.
+PLUGIN_API void SetOnsetSilence(float silenceDb);
 
 // Stops the current session.
 PLUGIN_API void StopSession(void);
