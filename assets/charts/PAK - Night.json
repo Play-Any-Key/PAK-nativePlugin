@@ -1,9 +1,9 @@
 {
-  "schemaVersion": "0.2.1",
+  "schemaVersion": "0.2.2",
   "song": {
     "songId": "pak_-_night",
     "title": "PAK - Night",
-    "artist": "박종혁",
+    "artist": "Unknown",
     "bpm": 170.0000850000425,
     "resolution": 480,
     "timeSignature": "4/4",
@@ -121,38 +121,6 @@
         ]
       },
       {
-        "id": "chord_7",
-        "symbol": "chord_7",
-        "fingering": [
-          {
-            "string": 5,
-            "fret": 0,
-            "finger": 0
-          },
-          {
-            "string": 6,
-            "fret": 0,
-            "finger": 0
-          }
-        ]
-      },
-      {
-        "id": "chord_8",
-        "symbol": "chord_8",
-        "fingering": [
-          {
-            "string": 4,
-            "fret": 0,
-            "finger": 0
-          },
-          {
-            "string": 5,
-            "fret": 0,
-            "finger": 0
-          }
-        ]
-      },
-      {
         "id": "E5_low",
         "symbol": "E5",
         "fingering": [
@@ -169,8 +137,8 @@
         ]
       },
       {
-        "id": "B7",
-        "symbol": "B7",
+        "id": "D#",
+        "symbol": "D#",
         "fingering": [
           {
             "string": 5,
@@ -180,7 +148,7 @@
           {
             "string": 4,
             "fret": 7,
-            "finger": 2
+            "finger": 3
           }
         ]
       },
@@ -3768,15 +3736,23 @@
       "interpretation": "chord",
       "startTick": 155520,
       "durationTick": 240,
-      "chordId": "chord_7",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
     {
       "interpretation": "chord",
+      "startTick": 155520,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 155760,
       "durationTick": 240,
-      "chordId": "chord_7",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3805,7 +3781,7 @@
       "interpretation": "chord",
       "startTick": 156960,
       "durationTick": 240,
-      "chordId": "chord_7",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3827,7 +3803,7 @@
       "interpretation": "chord",
       "startTick": 157920,
       "durationTick": 240,
-      "chordId": "chord_7",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3863,15 +3839,23 @@
       "interpretation": "chord",
       "startTick": 159360,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
     {
       "interpretation": "chord",
+      "startTick": 159360,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 159600,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3900,7 +3884,7 @@
       "interpretation": "chord",
       "startTick": 160800,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3922,7 +3906,7 @@
       "interpretation": "chord",
       "startTick": 161760,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3958,15 +3942,23 @@
       "interpretation": "chord",
       "startTick": 163200,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
     {
       "interpretation": "chord",
+      "startTick": 163200,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 163440,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -3995,7 +3987,7 @@
       "interpretation": "chord",
       "startTick": 164640,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4017,7 +4009,7 @@
       "interpretation": "chord",
       "startTick": 165600,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4053,15 +4045,23 @@
       "interpretation": "chord",
       "startTick": 167040,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
     {
       "interpretation": "chord",
+      "startTick": 167040,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 167280,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4090,7 +4090,7 @@
       "interpretation": "chord",
       "startTick": 168480,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4643,6 +4643,14 @@
     },
     {
       "interpretation": "chord",
+      "startTick": 189600,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 190080,
       "durationTick": 240,
       "chordId": "D5",
@@ -4754,6 +4762,14 @@
     },
     {
       "interpretation": "chord",
+      "startTick": 197280,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 197760,
       "durationTick": 240,
       "chordId": "E5_low",
@@ -4844,7 +4860,7 @@
       "interpretation": "chord",
       "startTick": 202080,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4852,7 +4868,7 @@
       "interpretation": "chord",
       "startTick": 202320,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4860,7 +4876,7 @@
       "interpretation": "chord",
       "startTick": 202560,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4868,7 +4884,7 @@
       "interpretation": "chord",
       "startTick": 202800,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4890,7 +4906,7 @@
       "interpretation": "chord",
       "startTick": 203520,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4898,7 +4914,7 @@
       "interpretation": "chord",
       "startTick": 203760,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4906,7 +4922,7 @@
       "interpretation": "chord",
       "startTick": 204000,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4914,7 +4930,7 @@
       "interpretation": "chord",
       "startTick": 204240,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4922,7 +4938,7 @@
       "interpretation": "chord",
       "startTick": 204480,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4932,6 +4948,14 @@
       "durationTick": 720,
       "chordId": "C5",
       "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 204960,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
     },
     {
       "interpretation": "chord",
@@ -4951,7 +4975,7 @@
       "interpretation": "chord",
       "startTick": 205920,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4959,7 +4983,7 @@
       "interpretation": "chord",
       "startTick": 206160,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4967,7 +4991,7 @@
       "interpretation": "chord",
       "startTick": 206400,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4975,7 +4999,7 @@
       "interpretation": "chord",
       "startTick": 206640,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -4997,7 +5021,7 @@
       "interpretation": "chord",
       "startTick": 207360,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5005,7 +5029,7 @@
       "interpretation": "chord",
       "startTick": 207600,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5013,7 +5037,7 @@
       "interpretation": "chord",
       "startTick": 207840,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5021,7 +5045,7 @@
       "interpretation": "chord",
       "startTick": 208080,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5029,7 +5053,7 @@
       "interpretation": "chord",
       "startTick": 208320,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5042,23 +5066,31 @@
     },
     {
       "interpretation": "chord",
+      "startTick": 208800,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 209280,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 209520,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 209760,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5066,7 +5098,7 @@
       "interpretation": "chord",
       "startTick": 210000,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5074,7 +5106,7 @@
       "interpretation": "chord",
       "startTick": 210240,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5082,7 +5114,7 @@
       "interpretation": "chord",
       "startTick": 210480,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5090,21 +5122,21 @@
       "interpretation": "chord",
       "startTick": 210720,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 210960,
       "durationTick": 240,
-      "chordId": "B7",
+      "chordId": "D#",
       "strumTechnique": "down"
     },
     {
       "interpretation": "chord",
       "startTick": 211200,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5126,7 +5158,7 @@
       "interpretation": "chord",
       "startTick": 211920,
       "durationTick": 240,
-      "chordId": "chord_8",
+      "chordId": "cutting",
       "strumTechnique": "down",
       "technique": "cutting"
     },
@@ -5216,6 +5248,14 @@
     },
     {
       "interpretation": "chord",
+      "startTick": 216480,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 216960,
       "durationTick": 240,
       "chordId": "C5",
@@ -5286,6 +5326,14 @@
     },
     {
       "interpretation": "chord",
+      "startTick": 220320,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
+    },
+    {
+      "interpretation": "chord",
       "startTick": 220800,
       "durationTick": 240,
       "chordId": "C#dim",
@@ -5353,6 +5401,14 @@
       "durationTick": 720,
       "chordId": "C#dim",
       "strumTechnique": "down"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 224160,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
     },
     {
       "interpretation": "chord",
@@ -5439,6 +5495,14 @@
       "fret": 2,
       "finger": 0,
       "technique": "normal"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 231840,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
     },
     {
       "interpretation": "chord",
@@ -6154,6 +6218,14 @@
       "fret": 3,
       "finger": 0,
       "technique": "normal"
+    },
+    {
+      "interpretation": "chord",
+      "startTick": 270240,
+      "durationTick": 0,
+      "chordId": "ghost",
+      "strumTechnique": "down",
+      "technique": "ghost"
     },
     {
       "interpretation": "single",

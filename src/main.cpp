@@ -18,7 +18,7 @@ static std::thread g_judgeThread;
 
 extern "C" PLUGIN_API const char *GetPluginVersion(void) {
     // Returns the version of the loaded native plugin.
-    return "0.5.2";
+    return "0.5.3";
 }
 
 int inoutRhythmGame(void *outputBuffer,
