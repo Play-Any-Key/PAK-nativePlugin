@@ -212,6 +212,9 @@ PLUGIN_API void SetJudgeOnsetBlockMs(double blockMs);
 // Sets the minimum input level in dBFS required for an onset to be detected.
 PLUGIN_API void SetOnsetSilence(float silenceDb);
 
+// Sets logarithmic compression applied before the onset descriptor. Zero disables it.
+PLUGIN_API void SetOnsetCompression(float compression);
+
 // Stops the current session.
 PLUGIN_API void StopSession(void);
 

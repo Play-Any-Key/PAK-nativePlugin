@@ -484,6 +484,12 @@ extern "C" PLUGIN_API void SetOnsetSilence(float silenceDb) {
         aubio_onset_set_silence(g_state.onsetDetector, silenceDb);
 }
 
+extern "C" PLUGIN_API void SetOnsetCompression(float compression) {
+    // Sets logarithmic compression applied before aubio calculates the onset descriptor.
+    if (g_state.onsetDetector)
+        aubio_onset_set_compression(g_state.onsetDetector, compression);
+}
+
 extern "C" PLUGIN_API int GetJudgeProcessingStats(JudgeProcessingStats *outStats) {
     // Copies callback-to-judge audio block processing counters.
     if (g_adac == nullptr)

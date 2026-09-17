@@ -260,6 +260,23 @@ target_compile_definitions(JudgeTest
 )
 add_dependencies(JudgeTest PAKNativePlugin)
 
+# 기타 단독 기준 트랙의 초반 36초만 재생한다.
+add_executable(JudgeTest_36sec
+  "test/play/JudgeTest_36sec.cpp"
+  "src/ChartParser.cpp"
+)
+target_link_libraries(JudgeTest_36sec
+  PRIVATE
+    MPG123::libmpg123
+    nlohmann_json::nlohmann_json
+)
+target_compile_definitions(JudgeTest_36sec
+  PRIVATE
+    PAK_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}"
+    PAK_DEFAULT_DLL_PATH="$<TARGET_FILE:PAKNativePlugin>"
+)
+add_dependencies(JudgeTest_36sec PAKNativePlugin)
+
 # 녹음된 G5 입력으로 첫 24개 운지 연습 판정을 재현한다.
 add_executable(G5fingeringTest
   "test/performanceTest/G5fingeringTest.cpp"

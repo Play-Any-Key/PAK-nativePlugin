@@ -31,6 +31,7 @@ struct PluginApi {
     int (*FeedJudgeTestAudio)(const int16_t *, unsigned int);
     void (*SetJudgeOnsetBlockMs)(double);
     void (*SetOnsetSilence)(float);
+    void (*SetOnsetCompression)(float);
     int (*PollJudgeEvent)(JudgeEvent *);
     void (*StopSession)(void);
     void (*Shutdown)(void);
@@ -78,7 +79,7 @@ class TeeStreamBuffer : public std::streambuf {
 void usage() {
     // Prints the optional audio, chart, DLL, and onset parameters for this replay test.
     std::cout << "usage: JudgeTest <guitarMp3Path> <chartPath> <dllPath> <onsetMethod> "
-                 "<onsetThreshold> <onsetBlockMs> <onsetSilenceDb>\n";
+                 "<onsetThreshold> <onsetBlockMs> <onsetSilenceDb> <onsetCompression>\n";
     std::exit(0);
 }
 
@@ -110,6 +111,7 @@ bool loadPlugin(const std::string &dllPath, PluginApi *plugin) {
            loadPluginFunction(plugin, "FeedJudgeTestAudio", &plugin->FeedJudgeTestAudio) &&
            loadPluginFunction(plugin, "SetJudgeOnsetBlockMs", &plugin->SetJudgeOnsetBlockMs) &&
            loadPluginFunction(plugin, "SetOnsetSilence", &plugin->SetOnsetSilence) &&
+           loadPluginFunction(plugin, "SetOnsetCompression", &plugin->SetOnsetCompression) &&
            loadPluginFunction(plugin, "PollJudgeEvent", &plugin->PollJudgeEvent) &&
            loadPluginFunction(plugin, "StopSession", &plugin->StopSession) &&
            loadPluginFunction(plugin, "Shutdown", &plugin->Shutdown);
@@ -213,10 +215,12 @@ int main(int argc, char *argv[]) {
     float onsetThreshold = 0.04f;
     double onsetBlockMs = 100.0;
     float onsetSilenceDb = -45.0f;
+    float onsetCompression = 0.0f;
     std::string onsetThresholdText = "0.04";
     std::string onsetBlockMsText = "100";
     std::string onsetSilenceDbText = "-45";
-    if (argc > 8)
+    std::string onsetCompressionText = "0";
+    if (argc > 9)
         usage();
     if (argc > 1)
         mp3Path = argv[1];
@@ -238,11 +242,15 @@ int main(int argc, char *argv[]) {
         onsetSilenceDb = std::strtof(argv[7], nullptr);
         onsetSilenceDbText = argv[7];
     }
+    if (argc > 8) {
+        onsetCompression = std::strtof(argv[8], nullptr);
+        onsetCompressionText = argv[8];
+    }
 
     std::string logPath = std::string(PAK_SOURCE_DIR) +
                           u8"/docs/JudgeStability/JudgeTest/JudgeTest_" + onsetMethod + "_" +
                           onsetThresholdText + "_" + onsetBlockMsText + "_" + onsetSilenceDbText +
-                          ".log";
+                          "_" + onsetCompressionText + ".log";
     std::ofstream logFile(std::filesystem::u8path(logPath));
     if (!logFile) {
         std::cerr << "Failed to open test log: " << logPath << "\n";
@@ -293,6 +301,7 @@ int main(int argc, char *argv[]) {
     }
     plugin.SetJudgeOnsetBlockMs(onsetBlockMs);
     plugin.SetOnsetSilence(onsetSilenceDb);
+    plugin.SetOnsetCompression(onsetCompression);
     if (plugin.StartJudgeTestSession() != 0) {
         std::cerr << "Failed to start the guitar reference replay.\n";
         goto cleanup;
@@ -302,6 +311,7 @@ int main(int argc, char *argv[]) {
     std::cout << "Chart: " << chart.title << " / " << chart.difficulty << "\n";
     std::cout << "Onset block: " << onsetBlockMs << " ms\n";
     std::cout << "Onset silence: " << onsetSilenceDb << " dBFS\n";
+    std::cout << "Onset compression: " << onsetCompression << "\n";
     std::cout << "Note, Judge, Chord, Onset(ms), Error(ms)\n";
     for (size_t offset = 0; offset < samples.size(); offset += block.size()) {
         std::fill(block.begin(), block.end(), 0);
