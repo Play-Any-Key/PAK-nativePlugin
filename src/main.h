@@ -215,6 +215,12 @@ PLUGIN_API void SetOnsetSilence(float silenceDb);
 // Sets logarithmic compression applied before the onset descriptor. Zero disables it.
 PLUGIN_API void SetOnsetCompression(float compression);
 
+// Adjusts aubio's default onset delay. Positive values move reported onset times earlier.
+PLUGIN_API void SetOnsetDelayOffsetMs(float offsetMs);
+
+// Sets the aubio onset delay in milliseconds.
+PLUGIN_API void SetOnsetDelayMs(float delayMs);
+
 // Stops the current session.
 PLUGIN_API void StopSession(void);
 

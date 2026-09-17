@@ -490,6 +490,20 @@ extern "C" PLUGIN_API void SetOnsetCompression(float compression) {
         aubio_onset_set_compression(g_state.onsetDetector, compression);
 }
 
+extern "C" PLUGIN_API void SetOnsetDelayOffsetMs(float offsetMs) {
+    // Offsets the default aubio delay once before onset analysis begins.
+    if (g_state.onsetDetector) {
+        float delayMs = aubio_onset_get_delay_ms(g_state.onsetDetector) + offsetMs;
+        aubio_onset_set_delay_ms(g_state.onsetDetector, delayMs);
+    }
+}
+
+extern "C" PLUGIN_API void SetOnsetDelayMs(float delayMs) {
+    // Sets the aubio delay used to compensate reported onset timestamps.
+    if (g_state.onsetDetector)
+        aubio_onset_set_delay_ms(g_state.onsetDetector, delayMs);
+}
+
 extern "C" PLUGIN_API int GetJudgeProcessingStats(JudgeProcessingStats *outStats) {
     // Copies callback-to-judge audio block processing counters.
     if (g_adac == nullptr)
