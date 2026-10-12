@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "ChartParser.h"
+#include "../feature/ChartParser.h"
 #include "RtAudio.h"
 
 extern "C" {

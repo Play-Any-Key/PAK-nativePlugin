@@ -9,12 +9,14 @@ enum PluginEventType {
     PluginEvent_None = 0,
     PluginEvent_Judge = 1,
     PluginEvent_GuitarInput = 2,
+    PluginEvent_FingeringTestRawOnset = 3,
 };
 
 struct PluginEvent {
     int type;
     JudgeEvent judge;
     GuitarInputEvent guitarInput;
+    FingeringTestRawOnset fingeringTestRawOnset;
 };
 
 struct PluginEventQueue {

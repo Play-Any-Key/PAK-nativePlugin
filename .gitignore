@@ -54,3 +54,6 @@ cmake-build-*/
 # AI
 .agents
 AGENTS.md
+
+# My Util
+apply.cmd

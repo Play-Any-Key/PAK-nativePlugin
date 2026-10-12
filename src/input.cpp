@@ -61,10 +61,14 @@ void finalizePendingGuitarInputs(PluginState *state, double audioTimeMs) {
 
         PitchObservation selected = {};
         if (selectGuitarPitchObservation(state, pending, &selected)) {
-            GuitarInputEvent event = {};
-            event.midi = selected.midi;
-            event.audioTimeMs = pending.onsetAudioTimeMs;
-            pushGuitarInputEvent(state, event);
+            double lastEventTime = state->lastGuitarInputEventAudioTimeMs.load();
+            if (pending.onsetAudioTimeMs - lastEventTime >= state->guitarInputIntervalMs.load()) {
+                GuitarInputEvent event = {};
+                event.midi = selected.midi;
+                event.audioTimeMs = pending.onsetAudioTimeMs;
+                pushGuitarInputEvent(state, event);
+                state->lastGuitarInputEventAudioTimeMs.store(pending.onsetAudioTimeMs);
+            }
         }
 
         state->pendingGuitarInputs.erase(state->pendingGuitarInputs.begin() + index);

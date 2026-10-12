@@ -1,0 +1,418 @@
+D:\Project\PAK\PAK-nativePlugin>run
+Fingering practice: song output disabled
+The target stays on screen until it is played correctly.
+
+
+Target 1/975: Chord G5
+Play the target to continue.
+Incorrect: G5 - retry the same target
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 4
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 6
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+Incorrect: G5 - retry the same target
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 7
+Onset | detected 2 | accepted 2
+Chord | pass 0 | fail 2
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 4 | dropped 0 | not full
+Audio blocks | dropped 8
+Onset | detected 4 | accepted 4
+Chord | pass 0 | fail 4
+Queue | consumed 4 | dropped 0 | not full
+Audio blocks | dropped 8
+Onset | detected 5 | accepted 5
+Chord | pass 0 | fail 4
+
+
+Target 2/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 3/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 6 | dropped 0 | not full
+Audio blocks | dropped 8
+Onset | detected 6 | accepted 6
+Chord | pass 2 | fail 4
+
+
+Target 4/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 5/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 6/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 9 | dropped 0 | not full
+Audio blocks | dropped 10
+Onset | detected 9 | accepted 9
+Chord | pass 5 | fail 4
+Incorrect: G5 - retry the same target
+
+
+Target 7/975: Chord G5
+Play the target to continue.
+Correct: G5
+Incorrect: G5 - retry the same target
+Queue | consumed 12 | dropped 0 | not full
+Audio blocks | dropped 14
+Onset | detected 13 | accepted 12
+Chord | pass 6 | fail 6
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 14 | dropped 0 | not full
+Audio blocks | dropped 16
+Onset | detected 16 | accepted 15
+Chord | pass 6 | fail 8
+Incorrect: G5 - retry the same target
+
+
+Target 8/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 9/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 17 | dropped 0 | not full
+Audio blocks | dropped 18
+Onset | detected 19 | accepted 18
+Chord | pass 8 | fail 9
+
+
+Target 10/975: Chord G5
+Play the target to continue.
+Correct: G5
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 21 | dropped 0 | not full
+Audio blocks | dropped 21
+Onset | detected 23 | accepted 21
+Chord | pass 9 | fail 12
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 27 | dropped 0 | not full
+Audio blocks | dropped 28
+Onset | detected 29 | accepted 27
+Chord | pass 9 | fail 18
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 34 | dropped 0 | not full
+Audio blocks | dropped 37
+Onset | detected 37 | accepted 35
+Chord | pass 9 | fail 25
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 42 | dropped 0 | not full
+Audio blocks | dropped 49
+Onset | detected 45 | accepted 43
+Chord | pass 9 | fail 33
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 50 | dropped 0 | not full
+Audio blocks | dropped 61
+Onset | detected 52 | accepted 50
+Chord | pass 9 | fail 41
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 56 | dropped 0 | not full
+Audio blocks | dropped 70
+Onset | detected 58 | accepted 56
+Chord | pass 9 | fail 47
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 66 | dropped 0 | not full
+Audio blocks | dropped 85
+Onset | detected 68 | accepted 66
+Chord | pass 9 | fail 57
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 73 | dropped 0 | not full
+Audio blocks | dropped 96
+Onset | detected 75 | accepted 73
+Chord | pass 9 | fail 64
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 80 | dropped 0 | not full
+Audio blocks | dropped 104
+Onset | detected 82 | accepted 80
+Chord | pass 9 | fail 71
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 88 | dropped 0 | not full
+Audio blocks | dropped 119
+Onset | detected 90 | accepted 88
+Chord | pass 9 | fail 79
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 97 | dropped 0 | not full
+Audio blocks | dropped 129
+Onset | detected 99 | accepted 97
+Chord | pass 9 | fail 88
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 107 | dropped 0 | not full
+Audio blocks | dropped 143
+Onset | detected 109 | accepted 107
+Chord | pass 9 | fail 98
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 115 | dropped 0 | not full
+Audio blocks | dropped 154
+Onset | detected 117 | accepted 115
+Chord | pass 9 | fail 106
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 121 | dropped 0 | not full
+Audio blocks | dropped 162
+Onset | detected 123 | accepted 121
+Chord | pass 9 | fail 112
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 128 | dropped 0 | not full
+Audio blocks | dropped 175
+Onset | detected 130 | accepted 128
+Chord | pass 9 | fail 119
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 139 | dropped 0 | not full
+Audio blocks | dropped 188
+Onset | detected 141 | accepted 139
+Chord | pass 9 | fail 130
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 146 | dropped 0 | not full
+Audio blocks | dropped 200
+Onset | detected 148 | accepted 146
+Chord | pass 9 | fail 137
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 151 | dropped 0 | not full
+Audio blocks | dropped 208
+Onset | detected 153 | accepted 151
+Chord | pass 9 | fail 142
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 154 | dropped 0 | not full
+Audio blocks | dropped 209
+Onset | detected 156 | accepted 154
+Chord | pass 9 | fail 145
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 156 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 158 | accepted 156
+Chord | pass 9 | fail 147
+Incorrect: G5 - retry the same target
+Queue | consumed 157 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 159 | accepted 157
+Chord | pass 9 | fail 148
+Incorrect: G5 - retry the same target
+Queue | consumed 158 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 160 | accepted 158
+Chord | pass 9 | fail 149
+Incorrect: G5 - retry the same target
+Queue | consumed 159 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 161 | accepted 159
+Chord | pass 9 | fail 150
+Queue | consumed 159 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 161 | accepted 159
+Chord | pass 9 | fail 150
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 161 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 163 | accepted 161
+Chord | pass 9 | fail 152
+Incorrect: G5 - retry the same target
+Queue | consumed 162 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 164 | accepted 162
+Chord | pass 9 | fail 153
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 164 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 166 | accepted 164
+Chord | pass 9 | fail 155
+Incorrect: G5 - retry the same target
+Incorrect: G5 - retry the same target
+Queue | consumed 166 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 168 | accepted 166
+Chord | pass 9 | fail 157
+Incorrect: G5 - retry the same target
+Queue | consumed 167 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 169 | accepted 167
+Chord | pass 9 | fail 158
+Incorrect: G5 - retry the same target
+Queue | consumed 168 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 170 | accepted 168
+Chord | pass 9 | fail 159
+Incorrect: G5 - retry the same target
+Queue | consumed 169 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 171 | accepted 169
+Chord | pass 9 | fail 160
+Incorrect: G5 - retry the same target
+Queue | consumed 170 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 172 | accepted 170
+Chord | pass 9 | fail 161
+Incorrect: G5 - retry the same target
+Queue | consumed 171 | dropped 0 | not full
+Audio blocks | dropped 211
+Onset | detected 173 | accepted 171
+Chord | pass 9 | fail 162

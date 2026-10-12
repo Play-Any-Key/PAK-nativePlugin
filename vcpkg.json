@@ -1,7 +1,12 @@
 {
   "dependencies": [
     "aubio",
-    "rtaudio",
+    "mpg123",
+    "asiosdk",
+    {
+      "name": "rtaudio",
+      "features": [ "asio" ]
+    },
     "nlohmann-json"
   ]
 }

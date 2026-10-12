@@ -9,8 +9,8 @@
 #include <thread>
 #include <vector>
 
-#include "../src/ChartParser.h"
-#include "../src/main.h"
+#include "../../src/ChartParser.h"
+#include "../../src/main.h"
 
 #ifdef _WIN32
 #include <conio.h>
@@ -31,6 +31,7 @@ struct PluginApi {
     void (*SetDSPParams)(float, float, float);
     int (*PollJudgeEvent)(JudgeEvent *);
     int (*GetAudioStats)(AudioStats *);
+    int (*GetSongSyncInfo)(SongSyncInfo *);
     void (*Shutdown)(void);
 };
 
@@ -95,6 +96,8 @@ const char *judgeResultText(int result) {
         return "Good";
     if (result == JudgeResult_Bad)
         return "Bad";
+    if (result == JudgeResult_Wrong)
+        return "Wrong";
     return "Miss";
 }
 
@@ -103,7 +106,7 @@ std::string formatJudgeEvent(const JudgeEvent &event) {
     std::ostringstream text;
     text << judgeResultText(event.result) << " (" << std::showpos << std::fixed
          << std::setprecision(1) << event.errorMs << std::noshowpos << " ms, " << event.noteName;
-    if (event.result == JudgeResult_Miss && event.detectedMidi != event.targetMidi)
+    if (event.result == JudgeResult_Wrong)
         text << ", MIDI " << event.detectedMidi << "/" << event.targetMidi;
     text << ")";
     return text.str();
@@ -226,6 +229,8 @@ bool loadPlugin(const std::string &dllPath, PluginApi *plugin) {
         return false;
     if (!loadPluginFunction(plugin, "GetAudioStats", &plugin->GetAudioStats))
         return false;
+    if (!loadPluginFunction(plugin, "GetSongSyncInfo", &plugin->GetSongSyncInfo))
+        return false;
     if (!loadPluginFunction(plugin, "Shutdown", &plugin->Shutdown))
         return false;
 
@@ -262,8 +267,12 @@ void applyJudgeEvent(ClientState *state, const JudgeEvent &event) {
 
 int main(int argc, char *argv[]) {
     unsigned int channels, fs, oDevice = 0, iDevice = 0, iOffset = 0, oOffset = 0;
-    std::string chartPath = "assets/charts/CGAmE.json";
-    std::string dllPath = "out/build/ninja-debug/PAKNativePlugin.dll";
+    std::string chartPath = "assets/charts/PAK - Night.json";
+#ifdef PAK_DEFAULT_DLL_PATH
+    std::string dllPath = PAK_DEFAULT_DLL_PATH;
+#else
+    std::string dllPath = "PAKNativePlugin.dll";
+#endif
 
     // Minimal command-line checking.
     if (argc < 3 || argc > 9)
@@ -303,6 +312,8 @@ int main(int argc, char *argv[]) {
     }
 
     int result = 0;
+    SongSyncInfo songInfo = {};
+    std::chrono::steady_clock::time_point lastSyncCheck = {};
     if (plugin.Initialize(channels, fs, iDevice, oDevice, iOffset, oOffset) != 0) {
         std::cout << "Plugin Initialize failed." << std::endl;
         result = 1;
@@ -315,11 +326,19 @@ int main(int argc, char *argv[]) {
         goto cleanup;
     }
 
+    if (plugin.GetSongSyncInfo(&songInfo) != 0) {
+        std::cout << "Plugin GetSongSyncInfo failed." << std::endl;
+        result = 1;
+        goto cleanup;
+    }
+
     plugin.SetDSPParams(4.0f, 0.5f, 0.2f);
 
     std::cout << "\nLoaded client chart: " << state.chart.title << " / " << state.chart.difficulty
               << "\n";
     std::cout << "Loaded plugin DLL : " << dllPath << "\n";
+    std::cout << "Chart audio       : " << songInfo.audioFile << "\n";
+    std::cout << "Song playback     : native DLL output\n";
     std::cout << "Running ... press <enter> to quit.\n";
 
     if (plugin.StartSession() != 0) {
@@ -328,10 +347,21 @@ int main(int argc, char *argv[]) {
         goto cleanup;
     }
 
+    lastSyncCheck = std::chrono::steady_clock::now();
     while (!enterPressed()) {
         AudioStats stats = {};
         if (plugin.GetAudioStats(&stats) != 0)
             break;
+
+        if (plugin.GetSongSyncInfo(&songInfo) != 0)
+            break;
+
+        auto now = std::chrono::steady_clock::now();
+        if (now - lastSyncCheck >= std::chrono::milliseconds(500)) {
+            std::cout << "\nSong time: " << (int)songInfo.songTimeMs << " ms (native DLL output)"
+                      << std::flush;
+            lastSyncCheck = now;
+        }
 
         JudgeEvent event = {};
         while (plugin.PollJudgeEvent(&event)) applyJudgeEvent(&state, event);

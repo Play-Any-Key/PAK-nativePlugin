@@ -1,25 +1,24 @@
 #include "main.h"
 
+#include <cstring>
+#include <thread>
+
+#include "RtAudio.h"
 #include "audioQueue.h"
 #include "dsp.h"
 #include "eventQueue.h"
 #include "input.h"
 #include "judge.h"
+#include "song.h"
+#include "setting.h"
 
-#include <thread>
-#include <vector>
-
-#include "RtAudio.h"
-
-#define FORMAT RTAUDIO_SINT16
-
-static RtAudio *g_adac = nullptr;
-static PluginState g_state = {};
+RtAudio *g_adac = nullptr;
+PluginState g_state = {};
 static std::thread g_judgeThread;
 
 extern "C" PLUGIN_API const char *GetPluginVersion(void) {
     // Returns the version of the loaded native plugin.
-    return "1.0.0";
+    return "0.5.3";
 }
 
 int inoutRhythmGame(void *outputBuffer,
@@ -34,14 +33,74 @@ int inoutRhythmGame(void *outputBuffer,
     MY_TYPE *output = (MY_TYPE *)outputBuffer;
     unsigned int sampleCount = nBufferFrames * state->channels;
 
+    if (state->sessionMode.load() == SessionMode_AudioTest) {
+        std::memcpy(output, input, sampleCount * sizeof(MY_TYPE));
+        if (pushAudioBlock(&state->audioQueue,
+                           input,
+                           nBufferFrames,
+                           sampleCount,
+                           streamTime,
+                           0.0,
+                           0.0))
+            state->queuedAudioBlocks.fetch_add(1);
+        else
+            state->droppedAudioBlocks.fetch_add(1);
+        return 0;
+    }
+
     if (!state->sessionClockStarted.exchange(true))
         state->sessionStreamTimeOffset.store(streamTime);
-    double sessionStreamTime = streamTime - state->sessionStreamTimeOffset.load();
+    double rawSessionStreamTime = streamTime - state->sessionStreamTimeOffset.load();
+    state->lastRawStreamTime.store(rawSessionStreamTime);
+
+    if (state->isPaused.load()) {
+        std::memset(output, 0, sampleCount * sizeof(MY_TYPE));
+        return 0;
+    }
+
+    if (state->resumeRequested.exchange(false)) {
+        double pausedDuration = rawSessionStreamTime - state->pauseStartedStreamTime.load();
+        state->pausedStreamDuration.store(state->pausedStreamDuration.load() + pausedDuration);
+    }
+    double sessionStreamTime = rawSessionStreamTime - state->pausedStreamDuration.load();
 
     state->lastStreamTime.store(sessionStreamTime);
-    if (!pushAudioBlock(&state->audioQueue, input, nBufferFrames, sampleCount, sessionStreamTime))
+    double chartTimeMs = sessionStreamTime * 1000.0 - COUNTDOWN_MS;
+    double chartTimeScale = 1.0;
+    int sessionMode = state->sessionMode.load();
+    if (sessionMode == SessionMode_SlowPractice) {
+        chartTimeMs = state->lastChartTimeMs.load();
+        chartTimeScale = state->practiceSpeed.load();
+        state->lastChartTimeMs.store(chartTimeMs +
+                                     nBufferFrames * 1000.0 / state->sampleRate * chartTimeScale);
+    } else if (sessionMode == SessionMode_FingeringPractice) {
+        int noteIndex = state->nextNoteIndex.load();
+        chartTimeMs = noteIndex < (int)state->chart.notes.size()
+                          ? state->chart.notes[noteIndex].startMs
+                          : state->chart.durationMs;
+        chartTimeScale = 0.0;
+        state->lastChartTimeMs.store(chartTimeMs);
+    } else {
+        state->lastChartTimeMs.store(chartTimeMs);
+    }
+
+    if (pushAudioBlock(&state->audioQueue,
+                       input,
+                       nBufferFrames,
+                       sampleCount,
+                       sessionStreamTime,
+                       chartTimeMs,
+                       chartTimeScale))
+        state->queuedAudioBlocks.fetch_add(1);
+    else
         state->droppedAudioBlocks.fetch_add(1);
-    processMonitorDsp(state, output, input, nBufferFrames);
+    processMonitorDsp(state,
+                      output,
+                      input,
+                      nBufferFrames,
+                      sessionStreamTime,
+                      chartTimeMs,
+                      chartTimeScale);
     return 0;
 }
 
@@ -73,97 +132,11 @@ void releaseAubio(PluginState *state) {
     state->input = nullptr;
 }
 
-extern "C" PLUGIN_API int Initialize(unsigned int channels,
-                                     unsigned int sampleRate,
-                                     unsigned int inputDevice,
-                                     unsigned int outputDevice,
-                                     unsigned int inputOffset,
-                                     unsigned int outputOffset) {
-    // Initializes RtAudio, DSP state, aubio detectors, and fixed queues.
-    Shutdown();
-
-    g_adac = new RtAudio();
-    g_adac->showWarnings(true);
-
-    g_state.chart = {};
-    g_state.channels = channels;
-    g_state.sampleRate = sampleRate;
-    g_state.bufferFrames = 128;
-    g_state.nextNoteIndex.store(0);
-    g_state.lastDetectedMidi = -1;
-    g_state.input = nullptr;
-    g_state.pitch = nullptr;
-    g_state.onset = nullptr;
-    g_state.chordInput = nullptr;
-    g_state.chordSpectrum = nullptr;
-    g_state.pitchDetector = nullptr;
-    g_state.onsetDetector = nullptr;
-    g_state.chordFft = nullptr;
-    g_state.inputGain.store(4.0f);
-    g_state.outputGain.store(0.5f);
-    g_state.lpfAlpha.store(0.2f);
-    g_state.stopRequested.store(true);
-    g_state.requestedSessionMode.store(SessionMode_GuitarInput);
-    g_state.sessionMode.store(SessionMode_None);
-    g_state.sessionStreamTimeOffset.store(0.0);
-    g_state.sessionClockStarted.store(false);
-    g_state.lpfState.assign(channels, 0.0f);
-    g_state.pitchObservations.clear();
-    g_state.pendingGuitarInputs.clear();
-    g_state.pendingJudgments.clear();
-
-    RtAudio::StreamParameters iParams, oParams;
-    iParams.nChannels = channels;
-    iParams.firstChannel = inputOffset;
-    oParams.nChannels = channels;
-    oParams.firstChannel = outputOffset;
-
-    if (inputDevice == 0) {
-        iParams.deviceId = g_adac->getDefaultInputDevice();
-    } else {
-        std::vector<unsigned int> deviceIds = g_adac->getDeviceIds();
-        iParams.deviceId = deviceIds[inputDevice];
-    }
-
-    if (outputDevice == 0) {
-        oParams.deviceId = g_adac->getDefaultOutputDevice();
-    } else {
-        std::vector<unsigned int> deviceIds = g_adac->getDeviceIds();
-        oParams.deviceId = deviceIds[outputDevice];
-    }
-
-    RtAudio::StreamOptions options;
-    if (g_adac->openStream(&oParams,
-                           &iParams,
-                           FORMAT,
-                           sampleRate,
-                           &g_state.bufferFrames,
-                           &inoutRhythmGame,
-                           (void *)&g_state,
-                           &options)) {
-        Shutdown();
-        return -1;
-    }
-
-    prepareAudioQueue(&g_state.audioQueue, 8, g_state.bufferFrames * channels);
-    preparePluginEventQueue(&g_state.eventQueue, 64);
-
-    g_state.input = new_fvec(g_state.bufferFrames);
-    g_state.pitch = new_fvec(1);
-    g_state.onset = new_fvec(1);
-    g_state.chordInput = new_fvec(CHORD_FFT_SIZE);
-    g_state.chordSpectrum = new_cvec(CHORD_FFT_SIZE);
-    g_state.pitchDetector = new_aubio_pitch("default", 2048, g_state.bufferFrames, sampleRate);
-    g_state.onsetDetector = new_aubio_onset("default", 1024, g_state.bufferFrames, sampleRate);
-    g_state.chordFft = new_aubio_fft(CHORD_FFT_SIZE);
-    aubio_pitch_set_unit(g_state.pitchDetector, "midi");
-    aubio_onset_set_threshold(g_state.onsetDetector, 0.3f);
-    return 0;
-}
-
 extern "C" PLUGIN_API int LoadChart(const char *chartPath) {
     // Loads a chart JSON file through ChartParser.
     if (!ChartParser::loadChart(chartPath, g_state.chart))
+        return -1;
+    if (g_adac != nullptr && (!loadSong(&g_state, chartPath) || !loadMetronome(&g_state, chartPath)))
         return -1;
 
     g_state.requestedSessionMode.store(SessionMode_Judge);
@@ -174,32 +147,96 @@ extern "C" PLUGIN_API int LoadChart(const char *chartPath) {
 extern "C" PLUGIN_API void ResetSessionTime(void) {
     // Resets the session-relative clock and judgment progress.
     g_state.nextNoteIndex.store(0);
+    g_state.advanceFingeringTargetOnFailure = false;
     g_state.lastDetectedMidi = -1;
     g_state.gameStarted.store(false);
     g_state.summaryFinished.store(false);
     g_state.sessionMode.store(SessionMode_None);
     g_state.lastStreamTime.store(0.0);
+    g_state.lastChartTimeMs.store(-COUNTDOWN_MS);
     g_state.sessionStreamTimeOffset.store(0.0);
     g_state.sessionClockStarted.store(false);
+    g_state.isPaused.store(false);
+    g_state.resumeRequested.store(false);
+    g_state.lastRawStreamTime.store(0.0);
+    g_state.pauseStartedStreamTime.store(0.0);
+    g_state.pausedStreamDuration.store(0.0);
     g_state.audioQueue.readIndex.store(0);
     g_state.audioQueue.writeIndex.store(0);
+    g_state.queuedAudioBlocks.store(0);
+    g_state.processedAudioBlocks.store(0);
     g_state.pitchObservations.clear();
     g_state.pendingGuitarInputs.clear();
     g_state.pendingJudgments.clear();
+    g_state.detectedOnsets.store(0);
+    g_state.startedFingeringJudgments.store(0);
+    g_state.passedChordJudgments.store(0);
+    g_state.failedChordJudgments.store(0);
+    g_state.lastGuitarInputEventAudioTimeMs.store(-g_state.guitarInputIntervalMs.load());
+    g_state.lastAcceptedJudgeOnsetAudioTimeMs.store(-1000000.0);
     if (g_state.onsetDetector)
         aubio_onset_reset(g_state.onsetDetector);
     preparePluginEventQueue(&g_state.eventQueue, 64);
+    preparePluginEventQueue(&g_state.fingeringTestRawOnsetQueue, 64);
 }
 
 extern "C" PLUGIN_API int StartSession(void) {
     // Starts the audio stream and the plugin-owned judge thread.
-    if (g_adac == nullptr)
+    if (g_adac == nullptr || g_state.audioTestMode)
         return -1;
     if (g_adac->isStreamOpen() == false)
         return -1;
 
     ResetSessionTime();
     g_state.sessionMode.store(g_state.requestedSessionMode.load());
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+    g_state.droppedJudgeEvents.store(0);
+
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    if (g_adac->startStream()) {
+        StopSession();
+        return -1;
+    }
+    return 0;
+}
+
+extern "C" PLUGIN_API int StartSlowPracticeSession(void) {
+    // Starts chart judgment five seconds before the first note without song mixing.
+    if (g_adac == nullptr || g_state.audioTestMode || g_adac->isStreamOpen() == false)
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_SlowPractice);
+    g_state.lastChartTimeMs.store(g_state.chart.notes.front().startMs - COUNTDOWN_MS);
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+    g_state.droppedJudgeEvents.store(0);
+
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    if (g_adac->startStream()) {
+        StopSession();
+        return -1;
+    }
+    return 0;
+}
+
+extern "C" PLUGIN_API void SetPracticeSpeed(float speed) {
+    // Sets the chart-clock multiplier used by the running slow-practice session.
+    if (speed < 0.25f)
+        speed = 0.25f;
+    if (speed > 1.25f)
+        speed = 1.25f;
+    g_state.practiceSpeed.store(speed);
+}
+
+extern "C" PLUGIN_API int StartFingeringPracticeSession(void) {
+    // Starts note-by-note judgment without song playback or timing-based misses.
+    if (g_adac == nullptr || g_state.audioTestMode || g_adac->isStreamOpen() == false)
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_FingeringPractice);
     g_state.stopRequested.store(false);
     g_state.droppedAudioBlocks.store(0);
     g_state.droppedJudgeEvents.store(0);
@@ -228,6 +265,84 @@ extern "C" PLUGIN_API void SetDSPParams(float inputGain, float outputGain, float
     g_state.lpfAlpha.store(lpfAlpha);
 }
 
+extern "C" PLUGIN_API void SetNamModelPath(const char *modelPath) {
+    // Selects the NAM model file that the next audio initialization loads.
+    g_state.namModelPath = modelPath;
+}
+
+extern "C" PLUGIN_API int StartAudioTest(void) {
+    // Starts pass-through audio and RMS analysis on the judge thread.
+    if (g_adac == nullptr || !g_state.audioTestMode ||
+        g_adac->isStreamOpen() == false || g_adac->isStreamRunning())
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_AudioTest);
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    if (g_adac->startStream()) {
+        StopAudioTest();
+        return -1;
+    }
+    return 0;
+}
+
+extern "C" PLUGIN_API void StopAudioTest(void) {
+    // Stops pass-through audio and joins its RMS analysis thread.
+    g_state.stopRequested.store(true);
+    if (g_state.audioTestMode && g_adac != nullptr && g_adac->isStreamRunning())
+        g_adac->stopStream();
+    if (g_judgeThread.joinable())
+        g_judgeThread.join();
+    g_state.sessionMode.store(SessionMode_None);
+    g_state.audioTestOutputLevelDb.store(-96.0f);
+}
+
+extern "C" PLUGIN_API int GetAudioTestOutputLevelDb(float *outLevelDb) {
+    // Copies the latest judge-thread RMS level in dBFS for the client.
+    if (g_adac == nullptr || !g_state.audioTestMode)
+        return -1;
+
+    *outLevelDb = g_state.audioTestOutputLevelDb.load();
+    return 0;
+}
+
+extern "C" PLUGIN_API void PauseSession(void) {
+    // Pauses audio output and judgment while preserving session progress.
+    if (!g_state.isPaused.exchange(true))
+        g_state.pauseStartedStreamTime.store(g_state.lastRawStreamTime.load());
+}
+
+extern "C" PLUGIN_API void ResumeSession(void) {
+    // Resumes a paused session without advancing its session clock.
+    if (g_state.isPaused.exchange(false))
+        g_state.resumeRequested.store(true);
+}
+
+extern "C" PLUGIN_API int RestartSession(void) {
+    // Restarts the active session mode with its clock and judgment progress reset.
+    int sessionMode = g_state.sessionMode.load();
+    StopSession();
+
+    if (sessionMode == SessionMode_SlowPractice)
+        return StartSlowPracticeSession();
+    if (sessionMode == SessionMode_FingeringPractice)
+        return StartFingeringPracticeSession();
+    return StartSession();
+}
+
+extern "C" PLUGIN_API void SetSongVolume(float volume) {
+    // Updates the chart-song volume without changing the instrument monitor gain.
+    g_state.songVolume.store(volume);
+}
+
+extern "C" PLUGIN_API void SetGuitarInputIntervalMs(double intervalMs) {
+    // Sets the minimum spacing between emitted guitar-control input events.
+    g_state.guitarInputIntervalMs.store(intervalMs);
+}
+
 extern "C" PLUGIN_API int PollJudgeEvent(JudgeEvent *outEvent) {
     // Polls one pending judge event through the judge module.
     return pollJudgeEvent(&g_state, outEvent);
@@ -246,7 +361,7 @@ extern "C" PLUGIN_API int GetAudioStats(AudioStats *outStats) {
     *outStats = {};
     outStats->streamTime = g_state.lastStreamTime.load();
     outStats->audioTimeMs = outStats->streamTime * 1000.0;
-    outStats->chartTimeMs = outStats->audioTimeMs - COUNTDOWN_MS;
+    outStats->chartTimeMs = g_state.lastChartTimeMs.load();
     outStats->countdownMs = COUNTDOWN_MS;
     outStats->streamLatency = g_adac->isStreamOpen() ? g_adac->getStreamLatency() : 0;
     outStats->bufferFrames = g_state.bufferFrames;
@@ -256,11 +371,167 @@ extern "C" PLUGIN_API int GetAudioStats(AudioStats *outStats) {
     outStats->nextNoteIndex = g_state.nextNoteIndex.load();
     outStats->isRunning = g_adac->isStreamRunning() ? 1 : 0;
     outStats->isFinished = g_state.summaryFinished.load() ? 1 : 0;
+    outStats->isPaused = g_state.isPaused.load() ? 1 : 0;
+    return 0;
+}
+
+extern "C" PLUGIN_API int GetJudgmentDiagnostics(JudgmentDiagnostics *outDiagnostics) {
+    // Copies counters used to diagnose fingering-practice onset and chord judgment behavior.
+    if (g_adac == nullptr && g_state.input == nullptr)
+        return -1;
+
+    *outDiagnostics = {};
+    outDiagnostics->detectedOnsets = g_state.detectedOnsets.load();
+    outDiagnostics->startedFingeringJudgments = g_state.startedFingeringJudgments.load();
+    outDiagnostics->passedChordJudgments = g_state.passedChordJudgments.load();
+    outDiagnostics->failedChordJudgments = g_state.failedChordJudgments.load();
+    return 0;
+}
+
+extern "C" PLUGIN_API int PollFingeringTestRawOnset(FingeringTestRawOnset *outOnset) {
+    // Polls one raw onset recorded by the no-device fingering test path.
+    return pollFingeringTestRawOnset(&g_state, outOnset);
+}
+
+extern "C" PLUGIN_API int StartFingeringTestSession(void) {
+    // Starts fingering judgment without a device stream for recorded test audio.
+    if (g_adac != nullptr || g_state.input == nullptr)
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_FingeringPractice);
+    g_state.advanceFingeringTargetOnFailure = true;
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+    g_state.droppedJudgeEvents.store(0);
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    return 0;
+}
+
+extern "C" PLUGIN_API int StartJudgeTestSession(void) {
+    // Starts the regular time-based judge thread without opening an audio stream.
+    if (g_adac != nullptr || g_state.input == nullptr)
+        return -1;
+
+    ResetSessionTime();
+    g_state.sessionMode.store(SessionMode_Judge);
+    g_state.stopRequested.store(false);
+    g_state.droppedAudioBlocks.store(0);
+    g_state.droppedJudgeEvents.store(0);
+    g_judgeThread = std::thread(judgeThreadMain, &g_state);
+    return 0;
+}
+
+extern "C" PLUGIN_API int FeedFingeringTestAudio(const int16_t *samples, unsigned int frames) {
+    // Sends one recorded audio block through the callback-to-judge queue used in practice.
+    if (g_state.sessionMode.load() != SessionMode_FingeringPractice || frames != g_state.bufferFrames)
+        return -1;
+
+    double streamTime = g_state.lastStreamTime.load();
+    int noteIndex = g_state.nextNoteIndex.load();
+    double chartTimeMs = noteIndex < (int)g_state.chart.notes.size()
+                             ? g_state.chart.notes[noteIndex].startMs
+                             : g_state.chart.durationMs;
+    if (!pushAudioBlock(&g_state.audioQueue,
+                        const_cast<MY_TYPE *>(samples),
+                        frames,
+                        frames * g_state.channels,
+                        streamTime,
+                        chartTimeMs,
+                        0.0)) {
+        g_state.droppedAudioBlocks.fetch_add(1);
+        return -1;
+    }
+
+    g_state.queuedAudioBlocks.fetch_add(1);
+    g_state.lastStreamTime.store(streamTime + (double)frames / g_state.sampleRate);
+    g_state.lastChartTimeMs.store(chartTimeMs);
+    return 0;
+}
+
+extern "C" PLUGIN_API int FeedJudgeTestAudio(const int16_t *samples, unsigned int frames) {
+    // Queues recorded PCM with its audio time used directly as the chart clock.
+    if (g_state.sessionMode.load() != SessionMode_Judge || frames != g_state.bufferFrames)
+        return -1;
+
+    double streamTime = g_state.lastStreamTime.load();
+    double chartTimeMs = streamTime * 1000.0;
+    if (!pushAudioBlock(&g_state.audioQueue,
+                        const_cast<MY_TYPE *>(samples),
+                        frames,
+                        frames * g_state.channels,
+                        streamTime,
+                        chartTimeMs,
+                        1.0)) {
+        g_state.droppedAudioBlocks.fetch_add(1);
+        return -1;
+    }
+
+    g_state.queuedAudioBlocks.fetch_add(1);
+    g_state.lastStreamTime.store(streamTime + (double)frames / g_state.sampleRate);
+    g_state.lastChartTimeMs.store(chartTimeMs);
+    return 0;
+}
+
+extern "C" PLUGIN_API void SetJudgeOnsetBlockMs(double blockMs) {
+    // Sets the debounce duration applied after accepting one onset for judgment.
+    g_state.judgeOnsetBlockMs.store(blockMs < 0.0 ? 0.0 : blockMs);
+}
+
+extern "C" PLUGIN_API void SetOnsetSilence(float silenceDb) {
+    // Sets the minimum input level required before aubio accepts an onset.
+    if (g_state.onsetDetector)
+        aubio_onset_set_silence(g_state.onsetDetector, silenceDb);
+}
+
+extern "C" PLUGIN_API void SetOnsetCompression(float compression) {
+    // Sets logarithmic compression applied before aubio calculates the onset descriptor.
+    if (g_state.onsetDetector)
+        aubio_onset_set_compression(g_state.onsetDetector, compression);
+}
+
+extern "C" PLUGIN_API void SetOnsetDelayOffsetMs(float offsetMs) {
+    // Offsets the default aubio delay once before onset analysis begins.
+    if (g_state.onsetDetector) {
+        float delayMs = aubio_onset_get_delay_ms(g_state.onsetDetector) + offsetMs;
+        aubio_onset_set_delay_ms(g_state.onsetDetector, delayMs);
+    }
+}
+
+extern "C" PLUGIN_API void SetOnsetDelayMs(float delayMs) {
+    // Sets the aubio delay used to compensate reported onset timestamps.
+    if (g_state.onsetDetector)
+        aubio_onset_set_delay_ms(g_state.onsetDetector, delayMs);
+}
+
+extern "C" PLUGIN_API int GetJudgeProcessingStats(JudgeProcessingStats *outStats) {
+    // Copies callback-to-judge audio block processing counters.
+    if (g_adac == nullptr)
+        return -1;
+
+    *outStats = {};
+    outStats->queuedAudioBlocks = g_state.queuedAudioBlocks.load();
+    outStats->processedAudioBlocks = g_state.processedAudioBlocks.load();
+    outStats->droppedAudioBlocks = g_state.droppedAudioBlocks.load();
+    return 0;
+}
+
+extern "C" PLUGIN_API int GetSongSyncInfo(SongSyncInfo *outInfo) {
+    // Returns the chart song and its position on the plugin session clock.
+    if (g_adac == nullptr || g_state.chart.audioFile.empty())
+        return -1;
+
+    *outInfo = {};
+    std::strncpy(
+        outInfo->audioFile, g_state.chart.audioFile.c_str(), sizeof(outInfo->audioFile) - 1);
+    outInfo->audioOffsetMs = g_state.chart.audioOffsetMs;
+    outInfo->durationMs = g_state.chart.durationMs;
+    outInfo->songTimeMs = g_state.lastChartTimeMs.load();
     return 0;
 }
 
 extern "C" PLUGIN_API void Shutdown(void) {
-    // Releases the stream, judge thread, and aubio resources.
+    // Releases the stream, selected ASIO driver, judge thread, and aubio resources.
     StopSession();
     if (g_adac != nullptr) {
         if (g_adac->isStreamOpen())
@@ -269,5 +540,10 @@ extern "C" PLUGIN_API void Shutdown(void) {
         g_adac = nullptr;
     }
     releaseAubio(&g_state);
+    g_state.namModel.reset();
+    g_state.namInput.clear();
+    g_state.namOutput.clear();
+    releaseSelectedAsioDriver();
+    shutdownSongDecoder();
     aubio_cleanup();
 }

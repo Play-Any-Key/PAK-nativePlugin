@@ -1,0 +1,215 @@
+
+D:\Project\PAK\PAK-nativePlugin>run
+Waiting for C5 with aubio onset timestamp and continuous onset analysis... press <enter> to quit.
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 2670 | captured 58 | samples 7424
+Onset | detected 1 | started 1 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 4981 | captured 58 | samples 7424
+Onset | detected 2 | started 2 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 5253 | captured 58 | samples 7424
+Onset | detected 3 | started 3 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 5517 | captured 58 | samples 7424
+Onset | detected 4 | started 4 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 5760 | captured 58 | samples 7424
+Onset | detected 5 | started 5 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 6010 | captured 59 | samples 7552
+Onset | detected 6 | started 6 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 6258 | captured 58 | samples 7424
+Onset | detected 7 | started 7 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 6484 | captured 58 | samples 7424
+Onset | detected 8 | started 8 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 6724 | captured 58 | samples 7424
+Onset | detected 9 | started 9 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 7202 | captured 58 | samples 7424
+Onset | detected 10 | started 10 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 7423 | captured 58 | samples 7424
+Onset | detected 11 | started 11 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 7642 | captured 58 | samples 7424
+Onset | detected 12 | started 12 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 8095 | captured 58 | samples 7424
+Onset | detected 13 | started 13 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 8313 | captured 58 | samples 7424
+Onset | detected 14 | started 14 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 8755 | captured 59 | samples 7552
+Onset | detected 15 | started 15 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 8970 | captured 58 | samples 7424
+Onset | detected 16 | started 16 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 9181 | captured 58 | samples 7424
+Onset | detected 17 | started 17 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 9390 | captured 58 | samples 7424
+Onset | detected 18 | started 18 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 9605 | captured 58 | samples 7424
+Onset | detected 19 | started 19 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 11540 | captured 58 | samples 7424
+Onset | detected 20 | started 20 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 11775 | captured 58 | samples 7424
+Onset | detected 21 | started 21 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 11973 | captured 58 | samples 7424
+Onset | detected 22 | started 22 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 12179 | captured 58 | samples 7424
+Onset | detected 23 | started 23 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 12605 | captured 58 | samples 7424
+Onset | detected 24 | started 24 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 12818 | captured 58 | samples 7424
+Onset | detected 25 | started 25 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 13018 | captured 58 | samples 7424
+Onset | detected 26 | started 26 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 13224 | captured 58 | samples 7424
+Onset | detected 27 | started 27 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 13433 | captured 58 | samples 7424
+Onset | detected 28 | started 28 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 13643 | captured 58 | samples 7424
+Onset | detected 29 | started 29 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 13843 | captured 58 | samples 7424
+Onset | detected 30 | started 30 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 14062 | captured 58 | samples 7424
+Onset | detected 31 | started 31 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 14271 | captured 58 | samples 7424
+Onset | detected 32 | started 32 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 15121 | captured 58 | samples 7424
+Onset | detected 33 | started 33 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 15516 | captured 58 | samples 7424
+Onset | detected 34 | started 34 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 15730 | captured 59 | samples 7552
+Onset | detected 35 | started 35 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 15920 | captured 58 | samples 7424
+Onset | detected 36 | started 36 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 16341 | captured 58 | samples 7424
+Onset | detected 37 | started 37 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 16737 | captured 58 | samples 7424
+Onset | detected 38 | started 38 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 16956 | captured 58 | samples 7424
+Onset | detected 39 | started 39 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 17142 | captured 58 | samples 7424
+Onset | detected 40 | started 40 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 17348 | captured 58 | samples 7424
+Onset | detected 41 | started 41 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 17551 | captured 58 | samples 7424
+Onset | detected 42 | started 42 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 17746 | captured 58 | samples 7424
+Onset | detected 43 | started 43 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 17962 | captured 58 | samples 7424
+Onset | detected 44 | started 44 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 18163 | captured 58 | samples 7424
+Onset | detected 45 | started 45 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 18358 | captured 58 | samples 7424
+Onset | detected 46 | started 46 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 18562 | captured 58 | samples 7424
+Onset | detected 47 | started 47 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 18769 | captured 59 | samples 7552
+Onset | detected 48 | started 48 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 19162 | captured 58 | samples 7424
+Onset | detected 49 | started 49 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 19378 | captured 59 | samples 7552
+Onset | detected 50 | started 50 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 19571 | captured 58 | samples 7424
+Onset | detected 51 | started 51 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: matched
+Audio blocks | total 19765 | captured 58 | samples 7424
+Onset | detected 52 | started 52 | ignored while collecting 0
+Waiting for input...
+Input detected. Checking C5 (aubio onset timestamp)... C5: not matched
+Audio blocks | total 20351 | captured 58 | samples 7424
+Onset | detected 53 | started 53 | ignored while collecting 0
+Waiting for input...

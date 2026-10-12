@@ -1,0 +1,318 @@
+
+D:\Project\PAK\PAK-nativePlugin>run
+Fingering practice: song output disabled
+The target stays on screen until it is played correctly.
+
+
+Target 1/975: Chord G5
+Play the target to continue.
+Incorrect: G5 - retry the same target
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+Queue | consumed 1 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 1 | accepted 1
+Chord | pass 0 | fail 1
+
+
+Target 2/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 2 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 3 | accepted 3
+Chord | pass 1 | fail 1
+
+
+Target 3/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 4/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 4 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 4 | accepted 4
+Chord | pass 3 | fail 1
+
+
+Target 5/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 5 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 5 | accepted 5
+Chord | pass 4 | fail 1
+
+
+Target 6/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 7/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 7 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 7 | accepted 7
+Chord | pass 6 | fail 1
+
+
+Target 8/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 8 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 8 | accepted 8
+Chord | pass 7 | fail 1
+
+
+Target 9/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 10/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 10 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 10 | accepted 10
+Chord | pass 9 | fail 1
+
+
+Target 11/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 11 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 11 | accepted 11
+Chord | pass 10 | fail 1
+
+
+Target 12/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 13/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 13 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 13 | accepted 13
+Chord | pass 12 | fail 1
+Queue | consumed 13 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 13 | accepted 13
+Chord | pass 12 | fail 1
+
+
+Target 14/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 15/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 15 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 15 | accepted 15
+Chord | pass 14 | fail 1
+
+
+Target 16/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 17/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 17 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 17 | accepted 17
+Chord | pass 16 | fail 1
+Incorrect: G5 - retry the same target
+Queue | consumed 18 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 18 | accepted 18
+Chord | pass 16 | fail 2
+
+
+Target 18/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 19 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 19 | accepted 19
+Chord | pass 17 | fail 2
+
+
+Target 19/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 20/975: Chord G5
+Play the target to continue.
+Correct: G5
+
+
+Target 21/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 22 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 23 | accepted 23
+Chord | pass 20 | fail 2
+
+
+Target 22/975: Chord G5
+Play the target to continue.
+Correct: G5
+Incorrect: G5 - retry the same target
+
+
+Target 23/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 25 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 25 | accepted 25
+Chord | pass 22 | fail 3
+Incorrect: G5 - retry the same target
+
+
+Target 24/975: Chord G5
+Play the target to continue.
+Correct: G5
+Queue | consumed 27 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 27 | accepted 27
+Chord | pass 23 | fail 4
+
+
+Target 25/975: Chord C5
+Play the target to continue.
+Correct: G5
+Incorrect: C5 - retry the same target
+Incorrect: C5 - retry the same target
+Queue | consumed 30 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 30 | accepted 30
+Chord | pass 24 | fail 6
+Incorrect: C5 - retry the same target
+Incorrect: C5 - retry the same target
+Incorrect: C5 - retry the same target
+Queue | consumed 33 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 33 | accepted 33
+Chord | pass 24 | fail 9
+
+
+Target 26/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 34 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 35 | accepted 34
+Chord | pass 25 | fail 9
+
+
+Target 27/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 35 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 37 | accepted 36
+Chord | pass 26 | fail 9
+
+
+Target 28/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 36 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 37 | accepted 36
+Chord | pass 27 | fail 9
+
+
+Target 29/975: Chord C5
+Play the target to continue.
+Correct: C5
+
+
+Target 30/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 38 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 39 | accepted 38
+Chord | pass 29 | fail 9
+
+
+Target 31/975: Chord C5
+Play the target to continue.
+Correct: C5
+
+
+Target 32/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 40 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 41 | accepted 40
+Chord | pass 31 | fail 9
+
+
+Target 33/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 41 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 43 | accepted 42
+Chord | pass 32 | fail 9
+
+
+Target 34/975: Chord C5
+Play the target to continue.
+Correct: C5
+
+
+Target 35/975: Chord C5
+Play the target to continue.
+Correct: C5
+Queue | consumed 43 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 45 | accepted 44
+Chord | pass 34 | fail 9
+
+
+Target 36/975: Chord C5
+Play the target to continue.
+Correct: C5
+
+
+Target 37/975: Chord D5
+Play the target to continue.
+Correct: C5
+Queue | consumed 45 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 46 | accepted 45
+Chord | pass 36 | fail 9
+Incorrect: D5 - retry the same target
+Queue | consumed 46 | dropped 0 | not full
+Audio blocks | dropped 0
+Onset | detected 47 | accepted 46
+Chord | pass 36 | fail 10

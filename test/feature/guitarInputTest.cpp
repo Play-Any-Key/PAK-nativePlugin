@@ -1,4 +1,4 @@
-#include "../src/main.h"
+#include "../../src/main.h"
 
 #include <chrono>
 #include <cstdlib>
@@ -45,8 +45,9 @@ std::string midiToNoteName(int midi) {
 
 void usage(void) {
     // Command-line usage for the DLL-backed guitar input test.
-    std::cout << "\nuseage: guitarInputTest N fs <iDevice> <oDevice> <iChannelOffset> "
+    std::cout << "\nusage: guitarInputTest [N] [fs] <iDevice> <oDevice> <iChannelOffset> "
                  "<oChannelOffset> <dllPath>\n";
+    std::cout << "    default: N = 2, fs = 48000, PAKNativePlugin.dll in the executable folder\n";
     std::cout << "    where N = number of channels,\n";
     std::cout << "    fs = the sample rate,\n";
     std::cout << "    iDevice = optional input device index to use (default = 0),\n";
@@ -54,7 +55,6 @@ void usage(void) {
     std::cout << "    iChannelOffset = an optional input channel offset (default = 0),\n";
     std::cout << "    oChannelOffset = optional output channel offset (default = 0),\n";
     std::cout << "    and dllPath = optional PAKNativePlugin.dll path.\n\n";
-    exit(0);
 }
 
 bool enterPressed(void) {
@@ -143,15 +143,19 @@ void printGuitarInputEvent(const GuitarInputEvent &event) {
 }
 
 int main(int argc, char *argv[]) {
-    unsigned int channels, fs, oDevice = 0, iDevice = 0, iOffset = 0, oOffset = 0;
-    std::string dllPath = "out/build/ninja-debug/PAKNativePlugin.dll";
+    unsigned int channels = 2, fs = 48000, oDevice = 0, iDevice = 0, iOffset = 0, oOffset = 0;
+    std::string dllPath = "PAKNativePlugin.dll";
 
-    // Minimal command-line checking.
-    if (argc < 3 || argc > 8)
+    // Uses default stereo 48 kHz settings when launched without command-line arguments.
+    if (argc > 8) {
         usage();
+        return 1;
+    }
 
-    channels = (unsigned int)atoi(argv[1]);
-    fs = (unsigned int)atoi(argv[2]);
+    if (argc > 1)
+        channels = (unsigned int)atoi(argv[1]);
+    if (argc > 2)
+        fs = (unsigned int)atoi(argv[2]);
     if (argc > 3)
         iDevice = (unsigned int)atoi(argv[3]);
     if (argc > 4)

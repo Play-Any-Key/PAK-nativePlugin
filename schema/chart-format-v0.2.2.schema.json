@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://play-any-key.local/schema/chart-format-v0.2.0.schema.json",
-  "title": "Play Any Key Chart Format v0.2.0",
+  "$id": "https://play-any-key.local/schema/chart-format-v0.2.2.schema.json",
+  "title": "Play Any Key Chart Format v0.2.2",
   "type": "object",
   "additionalProperties": false,
   "$comment": "Play Any Key의 기타 채보 파일 스키마",
@@ -11,7 +11,7 @@
   "properties": {
     "schemaVersion": {
       "type": "string",
-      "const": "0.2.0",
+      "const": "0.2.2",
       "$comment": "SemVer 채보 스키마 버전"
     },
 
@@ -215,7 +215,8 @@
               "slide",
               "bend",
               "palm_mute",
-              "dead_note"
+              "cutting",
+              "ghost"
             ],
             "$comment": "연주 주법"
           },
